@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1628199069123.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1101279666",
+    "id" : "D245B412",
+    "lastKnownWriteTime" : 1628200601,
+    "last_content_update" : 1628200601331,
+    "path" : "~/Documents/SHAVER_NETWORK/cohesionAndConflict/csv_examples/1_tidyCsvs.R",
+    "project_path" : "1_tidyCsvs.R",
+    "properties" : {
+        "cursorPosition" : "6,0",
+        "scrollLine" : "2",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1628199964660.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "AAB9E0BD",
+    "lastKnownWriteTime" : 7165278925604074292,
+    "last_content_update" : 1628199964660,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "1C2A34AF",
+        "caption" : "tidy.households",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=tidy.households&cache_key=1C2A34AF",
+        "displayedObservations" : 1,
+        "environment" : "",
+        "object" : "tidy.households",
+        "preview" : 0,
+        "totalObservations" : 1,
+        "variables" : 9
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
