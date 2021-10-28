@@ -62,51 +62,9 @@
         "_row_num": 18
       },
       {
-        "clause": "begin screen",
+        "comments": "Contact information",
+        "clause": "do section contact_information",
         "_row_num": 20
-      },
-      {
-        "type": "note",
-        "display": {
-          "prompt": {
-            "text": "Contact information:"
-          }
-        },
-        "_row_num": 21
-      },
-      {
-        "type": "note",
-        "display": {
-          "prompt": {
-            "text": "Get contact details to reconnect with head of household, or someone close to them."
-          }
-        },
-        "_row_num": 22
-      },
-      {
-        "comments": "contact details",
-        "type": "text",
-        "name": "contact_name",
-        "display": {
-          "prompt": {
-            "text": "Contact name"
-          }
-        },
-        "_row_num": 23
-      },
-      {
-        "type": "text",
-        "name": "contact_details",
-        "display": {
-          "prompt": {
-            "text": "Contact details"
-          }
-        },
-        "_row_num": 24
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 26
       }
     ],
     "choices": [
@@ -289,7 +247,7 @@
         "data_value": 2,
         "display": {
           "title": {
-            "text": "Always had enough, but sometimes food was of low quality"
+            "text": "Didn't have enough a few times a year"
           }
         },
         "_row_num": 23
@@ -299,7 +257,7 @@
         "data_value": 3,
         "display": {
           "title": {
-            "text": "Didn't have enough a few times a year"
+            "text": "Didn't have enough a few times a month"
           }
         },
         "_row_num": 24
@@ -309,7 +267,7 @@
         "data_value": 4,
         "display": {
           "title": {
-            "text": "Didn't have enough a few times a month"
+            "text": "Didn't have enough a few times a week"
           }
         },
         "_row_num": 25
@@ -319,20 +277,50 @@
         "data_value": 5,
         "display": {
           "title": {
-            "text": "Didn't have enough a few times a week"
+            "text": "Never or almost never had enough"
           }
         },
         "_row_num": 26
       },
       {
-        "choice_list_name": "food_security_list",
-        "data_value": 6,
+        "choice_list_name": "contact_roles",
+        "data_value": "head",
         "display": {
           "title": {
-            "text": "Never or almost never had enough"
+            "text": "Head of household"
           }
         },
-        "_row_num": 27
+        "_row_num": 28
+      },
+      {
+        "choice_list_name": "contact_roles",
+        "data_value": "spouse",
+        "display": {
+          "title": {
+            "text": "Spouse of Head"
+          }
+        },
+        "_row_num": 29
+      },
+      {
+        "choice_list_name": "contact_roles",
+        "data_value": "other_member",
+        "display": {
+          "title": {
+            "text": "Other household member"
+          }
+        },
+        "_row_num": 30
+      },
+      {
+        "choice_list_name": "contact_roles",
+        "data_value": "not_from_house",
+        "display": {
+          "title": {
+            "text": "Someone from outside the home"
+          }
+        },
+        "_row_num": 31
       }
     ],
     "settings": [
@@ -952,6 +940,119 @@
         "clause": "end screen",
         "_row_num": 8
       }
+    ],
+    "contact_information": [
+      {
+        "clause": "begin screen",
+        "_row_num": 2
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": "Contact information:"
+          }
+        },
+        "_row_num": 3
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": "Get contact details to reconnect with head of household, or someone close to them."
+          }
+        },
+        "_row_num": 4
+      },
+      {
+        "comments": "contact details",
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": "Contact person 1"
+          }
+        },
+        "_row_num": 5
+      },
+      {
+        "type": "text",
+        "name": "contact_name_1",
+        "display": {
+          "prompt": {
+            "text": "Contact name"
+          }
+        },
+        "_row_num": 6
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "contact_roles",
+        "name": "contact_role_1",
+        "display": {
+          "prompt": {
+            "text": "Relation to household"
+          }
+        },
+        "_row_num": 7
+      },
+      {
+        "type": "text",
+        "name": "contact_details_1",
+        "display": {
+          "prompt": {
+            "text": "Contact details"
+          }
+        },
+        "_row_num": 8
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": "Contact person 2"
+          }
+        },
+        "_row_num": 10
+      },
+      {
+        "type": "note",
+        "_row_num": 11
+      },
+      {
+        "type": "text",
+        "name": "contact_name_2",
+        "display": {
+          "prompt": {
+            "text": "Contact name"
+          }
+        },
+        "_row_num": 12
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "contact_roles",
+        "name": "contact_role_2",
+        "display": {
+          "prompt": {
+            "text": "Relation to household"
+          }
+        },
+        "_row_num": 13
+      },
+      {
+        "type": "text",
+        "name": "contact_details_2",
+        "display": {
+          "prompt": {
+            "text": "Contact details"
+          }
+        },
+        "_row_num": 14
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 16
+      }
     ]
   },
   "specification": {
@@ -1109,6 +1210,13 @@
           }
         },
         "_row_num": 6
+      },
+      "contact_information": {
+        "display": {
+          "title": {
+            "text": "Household Survey"
+          }
+        }
       }
     },
     "choices": {
@@ -1294,7 +1402,7 @@
           "data_value": 2,
           "display": {
             "title": {
-              "text": "Always had enough, but sometimes food was of low quality"
+              "text": "Didn't have enough a few times a year"
             }
           },
           "_row_num": 23
@@ -1304,7 +1412,7 @@
           "data_value": 3,
           "display": {
             "title": {
-              "text": "Didn't have enough a few times a year"
+              "text": "Didn't have enough a few times a month"
             }
           },
           "_row_num": 24
@@ -1314,7 +1422,7 @@
           "data_value": 4,
           "display": {
             "title": {
-              "text": "Didn't have enough a few times a month"
+              "text": "Didn't have enough a few times a week"
             }
           },
           "_row_num": 25
@@ -1324,20 +1432,52 @@
           "data_value": 5,
           "display": {
             "title": {
-              "text": "Didn't have enough a few times a week"
-            }
-          },
-          "_row_num": 26
-        },
-        {
-          "choice_list_name": "food_security_list",
-          "data_value": 6,
-          "display": {
-            "title": {
               "text": "Never or almost never had enough"
             }
           },
-          "_row_num": 27
+          "_row_num": 26
+        }
+      ],
+      "contact_roles": [
+        {
+          "choice_list_name": "contact_roles",
+          "data_value": "head",
+          "display": {
+            "title": {
+              "text": "Head of household"
+            }
+          },
+          "_row_num": 28
+        },
+        {
+          "choice_list_name": "contact_roles",
+          "data_value": "spouse",
+          "display": {
+            "title": {
+              "text": "Spouse of Head"
+            }
+          },
+          "_row_num": 29
+        },
+        {
+          "choice_list_name": "contact_roles",
+          "data_value": "other_member",
+          "display": {
+            "title": {
+              "text": "Other household member"
+            }
+          },
+          "_row_num": 30
+        },
+        {
+          "choice_list_name": "contact_roles",
+          "data_value": "not_from_house",
+          "display": {
+            "title": {
+              "text": "Someone from outside the home"
+            }
+          },
+          "_row_num": 31
         }
       ]
     },
@@ -1643,10 +1783,6 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 23,
-            "section_name": "survey"
-          },
-          {
             "_row_num": 26,
             "section_name": "model"
           }
@@ -1656,10 +1792,6 @@
       "contact_details": {
         "type": "string",
         "_defn": [
-          {
-            "_row_num": 24,
-            "section_name": "survey"
-          },
           {
             "_row_num": 27,
             "section_name": "model"
@@ -1739,10 +1871,73 @@
         ],
         "type": "string",
         "elementKey": "mataqali"
+      },
+      "contact_name_1": {
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "contact_information"
+          }
+        ],
+        "type": "string",
+        "elementKey": "contact_name_1"
+      },
+      "contact_role_1": {
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "contact_information"
+          }
+        ],
+        "type": "string",
+        "valuesList": "contact_roles",
+        "elementKey": "contact_role_1"
+      },
+      "contact_details_1": {
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "contact_information"
+          }
+        ],
+        "type": "string",
+        "elementKey": "contact_details_1"
+      },
+      "contact_name_2": {
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "contact_information"
+          }
+        ],
+        "type": "string",
+        "elementKey": "contact_name_2"
+      },
+      "contact_role_2": {
+        "_defn": [
+          {
+            "_row_num": 13,
+            "section_name": "contact_information"
+          }
+        ],
+        "type": "string",
+        "valuesList": "contact_roles",
+        "elementKey": "contact_role_2"
+      },
+      "contact_details_2": {
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "contact_information"
+          }
+        ],
+        "type": "string",
+        "elementKey": "contact_details_2"
       }
     },
     "section_names": [
       "asset_wealth",
+      "contact_information",
       "crops_fishing",
       "customary_membership",
       "families",
@@ -1766,7 +1961,8 @@
           "asset_wealth": true,
           "income": true,
           "food_security": true,
-          "crops_fishing": true
+          "crops_fishing": true,
+          "contact_information": true
         },
         "reachable_sections": {
           "id": true,
@@ -1777,7 +1973,8 @@
           "asset_wealth": true,
           "income": true,
           "food_security": true,
-          "crops_fishing": true
+          "crops_fishing": true,
+          "contact_information": true
         },
         "prompts": [
           {
@@ -1925,71 +2122,28 @@
             "_branch_label_enclosing_screen": "crops_fishing/0"
           },
           {
-            "type": "note",
+            "comments": "Contact information",
+            "clause": "do section contact_information",
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "prompt",
+            "_do_section_name": "contact_information",
+            "_type": "_section",
+            "promptIdx": 9,
             "display": {
-              "prompt": {
-                "text": "Contact information:"
+              "title": {
+                "text": "Household Survey"
               }
             },
-            "_row_num": 21,
-            "__rowNum__": 20,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen20",
-            "promptIdx": 9
-          },
-          {
-            "type": "note",
-            "display": {
-              "prompt": {
-                "text": "Get contact details to reconnect with head of household, or someone close to them."
-              }
-            },
-            "_row_num": 22,
-            "__rowNum__": 21,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen20",
-            "promptIdx": 10
-          },
-          {
-            "comments": "contact details",
-            "type": "text",
-            "name": "contact_name",
-            "display": {
-              "prompt": {
-                "text": "Contact name"
-              }
-            },
-            "_row_num": 23,
-            "__rowNum__": 22,
-            "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "survey/_screen20",
-            "promptIdx": 11
-          },
-          {
-            "type": "text",
-            "name": "contact_details",
-            "display": {
-              "prompt": {
-                "text": "Contact details"
-              }
-            },
-            "_row_num": 24,
-            "__rowNum__": 23,
-            "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "survey/_screen20",
-            "promptIdx": 12
+            "_branch_label_enclosing_screen": "contact_information/0"
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 27,
-            "_branch_label_enclosing_screen": "survey/_screen27",
-            "promptIdx": 13
+            "_row_num": 21,
+            "_branch_label_enclosing_screen": "survey/_screen21",
+            "promptIdx": 10
           }
         ],
         "validation_tag_map": {
@@ -2088,29 +2242,24 @@
             "operationIdx": 9
           },
           {
-            "clause": "begin screen",
+            "comments": "Contact information",
+            "clause": "do section contact_information",
             "_row_num": 20,
             "__rowNum__": 19,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 26,
-              "__rowNum__": 25,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
+            "_token_type": "do_section",
+            "_do_section_name": "contact_information",
             "operationIdx": 10
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 27,
+            "_row_num": 21,
             "operationIdx": 11
           },
           {
-            "_row_num": 27,
+            "_row_num": 21,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -2119,14 +2268,13 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 27,
+            "_row_num": 21,
             "operationIdx": 13
           }
         ],
         "branch_label_map": {
-          "_screen20": 10,
           "_contents": 12,
-          "_screen27": 12
+          "_screen21": 12
         }
       },
       "id": {
@@ -3067,6 +3215,224 @@
           "_screen9": 2
         }
       },
+      "contact_information": {
+        "section_name": "contact_information",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": "Contact information:"
+              }
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "contact_information/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": "Get contact details to reconnect with head of household, or someone close to them."
+              }
+            },
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "contact_information/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "comments": "contact details",
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": "Contact person 1"
+              }
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "contact_information/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "text",
+            "name": "contact_name_1",
+            "display": {
+              "prompt": {
+                "text": "Contact name"
+              }
+            },
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "contact_information/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "contact_roles",
+            "name": "contact_role_1",
+            "display": {
+              "prompt": {
+                "text": "Relation to household"
+              }
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "contact_information/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "text",
+            "name": "contact_details_1",
+            "display": {
+              "prompt": {
+                "text": "Contact details"
+              }
+            },
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "contact_information/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": "Contact person 2"
+              }
+            },
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "contact_information/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "note",
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "contact_information/_screen2",
+            "promptIdx": 7
+          },
+          {
+            "type": "text",
+            "name": "contact_name_2",
+            "display": {
+              "prompt": {
+                "text": "Contact name"
+              }
+            },
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "contact_information/_screen2",
+            "promptIdx": 8
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "contact_roles",
+            "name": "contact_role_2",
+            "display": {
+              "prompt": {
+                "text": "Relation to household"
+              }
+            },
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "contact_information/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "text",
+            "name": "contact_details_2",
+            "display": {
+              "prompt": {
+                "text": "Contact details"
+              }
+            },
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "contact_information/_screen2",
+            "promptIdx": 10
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 17,
+            "_branch_label_enclosing_screen": "contact_information/_screen17",
+            "promptIdx": 11
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 16,
+              "__rowNum__": 15,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 17,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 17,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 17,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen17": 2
+        }
+      },
       "initial": {
         "section_name": "initial",
         "nested_sections": {
@@ -3082,7 +3448,8 @@
           "asset_wealth": true,
           "income": true,
           "food_security": true,
-          "crops_fishing": true
+          "crops_fishing": true,
+          "contact_information": true
         },
         "prompts": [
           {
@@ -3558,10 +3925,6 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 23,
-            "section_name": "survey"
-          },
-          {
             "_row_num": 26,
             "section_name": "model"
           }
@@ -3574,10 +3937,6 @@
       "contact_details": {
         "type": "string",
         "_defn": [
-          {
-            "_row_num": 24,
-            "section_name": "survey"
-          },
           {
             "_row_num": 27,
             "section_name": "model"
@@ -3702,6 +4061,86 @@
         "elementName": "mataqali",
         "elementSet": "data",
         "elementPath": "mataqali"
+      },
+      "contact_name_1": {
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "contact_information"
+          }
+        ],
+        "type": "string",
+        "elementKey": "contact_name_1",
+        "elementName": "contact_name_1",
+        "elementSet": "data",
+        "elementPath": "contact_name_1"
+      },
+      "contact_role_1": {
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "contact_information"
+          }
+        ],
+        "type": "string",
+        "valuesList": "contact_roles",
+        "elementKey": "contact_role_1",
+        "elementName": "contact_role_1",
+        "elementSet": "data",
+        "elementPath": "contact_role_1"
+      },
+      "contact_details_1": {
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "contact_information"
+          }
+        ],
+        "type": "string",
+        "elementKey": "contact_details_1",
+        "elementName": "contact_details_1",
+        "elementSet": "data",
+        "elementPath": "contact_details_1"
+      },
+      "contact_name_2": {
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "contact_information"
+          }
+        ],
+        "type": "string",
+        "elementKey": "contact_name_2",
+        "elementName": "contact_name_2",
+        "elementSet": "data",
+        "elementPath": "contact_name_2"
+      },
+      "contact_role_2": {
+        "_defn": [
+          {
+            "_row_num": 13,
+            "section_name": "contact_information"
+          }
+        ],
+        "type": "string",
+        "valuesList": "contact_roles",
+        "elementKey": "contact_role_2",
+        "elementName": "contact_role_2",
+        "elementSet": "data",
+        "elementPath": "contact_role_2"
+      },
+      "contact_details_2": {
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "contact_information"
+          }
+        ],
+        "type": "string",
+        "elementKey": "contact_details_2",
+        "elementName": "contact_details_2",
+        "elementSet": "data",
+        "elementPath": "contact_details_2"
       },
       "asset_wealth_items": {
         "type": "string",
@@ -3879,10 +4318,24 @@
       },
       {
         "_partition": "Column",
+        "_aspect": "contact_role_1",
+        "_key": "displayChoicesList",
+        "_type": "object",
+        "_value": "[{\"choice_list_name\":\"contact_roles\",\"data_value\":\"head\",\"display\":{\"title\":{\"text\":\"Head of household\"}},\"_row_num\":28},{\"choice_list_name\":\"contact_roles\",\"data_value\":\"spouse\",\"display\":{\"title\":{\"text\":\"Spouse of Head\"}},\"_row_num\":29},{\"choice_list_name\":\"contact_roles\",\"data_value\":\"other_member\",\"display\":{\"title\":{\"text\":\"Other household member\"}},\"_row_num\":30},{\"choice_list_name\":\"contact_roles\",\"data_value\":\"not_from_house\",\"display\":{\"title\":{\"text\":\"Someone from outside the home\"}},\"_row_num\":31}]"
+      },
+      {
+        "_partition": "Column",
+        "_aspect": "contact_role_2",
+        "_key": "displayChoicesList",
+        "_type": "object",
+        "_value": "[{\"choice_list_name\":\"contact_roles\",\"data_value\":\"head\",\"display\":{\"title\":{\"text\":\"Head of household\"}},\"_row_num\":28},{\"choice_list_name\":\"contact_roles\",\"data_value\":\"spouse\",\"display\":{\"title\":{\"text\":\"Spouse of Head\"}},\"_row_num\":29},{\"choice_list_name\":\"contact_roles\",\"data_value\":\"other_member\",\"display\":{\"title\":{\"text\":\"Other household member\"}},\"_row_num\":30},{\"choice_list_name\":\"contact_roles\",\"data_value\":\"not_from_house\",\"display\":{\"title\":{\"text\":\"Someone from outside the home\"}},\"_row_num\":31}]"
+      },
+      {
+        "_partition": "Column",
         "_aspect": "food_security",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"food_security_list\",\"data_value\":1,\"display\":{\"title\":{\"text\":\"Always had enough\"}},\"_row_num\":22},{\"choice_list_name\":\"food_security_list\",\"data_value\":2,\"display\":{\"title\":{\"text\":\"Always had enough, but sometimes food was of low quality\"}},\"_row_num\":23},{\"choice_list_name\":\"food_security_list\",\"data_value\":3,\"display\":{\"title\":{\"text\":\"Didn't have enough a few times a year\"}},\"_row_num\":24},{\"choice_list_name\":\"food_security_list\",\"data_value\":4,\"display\":{\"title\":{\"text\":\"Didn't have enough a few times a month\"}},\"_row_num\":25},{\"choice_list_name\":\"food_security_list\",\"data_value\":5,\"display\":{\"title\":{\"text\":\"Didn't have enough a few times a week\"}},\"_row_num\":26},{\"choice_list_name\":\"food_security_list\",\"data_value\":6,\"display\":{\"title\":{\"text\":\"Never or almost never had enough\"}},\"_row_num\":27}]"
+        "_value": "[{\"choice_list_name\":\"food_security_list\",\"data_value\":1,\"display\":{\"title\":{\"text\":\"Always had enough\"}},\"_row_num\":22},{\"choice_list_name\":\"food_security_list\",\"data_value\":2,\"display\":{\"title\":{\"text\":\"Didn't have enough a few times a year\"}},\"_row_num\":23},{\"choice_list_name\":\"food_security_list\",\"data_value\":3,\"display\":{\"title\":{\"text\":\"Didn't have enough a few times a month\"}},\"_row_num\":24},{\"choice_list_name\":\"food_security_list\",\"data_value\":4,\"display\":{\"title\":{\"text\":\"Didn't have enough a few times a week\"}},\"_row_num\":25},{\"choice_list_name\":\"food_security_list\",\"data_value\":5,\"display\":{\"title\":{\"text\":\"Never or almost never had enough\"}},\"_row_num\":26}]"
       },
       {
         "_partition": "Column",

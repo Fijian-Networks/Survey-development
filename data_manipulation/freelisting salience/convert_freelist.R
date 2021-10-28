@@ -18,23 +18,23 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 FL <- selectFile()
 
 # read in CSV
-FL.csv.original <- arrange(as_tibble(read.csv(FL)))
+FL.csv.original <- arrange(as_tibble(read.csv(FL))) 
 
 # NOTE:: CSV read in adds 'X' before '_columnName'
-# filter out default columns starting with X_, age, gender
-# just leave ID, location and items 
-# TODO:: make sure gender is added and used
-csvFilterList <- c('gender','age', 'X_form_id','X_locale','X_savepoint_type','X_savepoint_timestamp','X_savepoint_creator','X_deleted','X_data_etag_at_modification','X_default_access','X_group_modify','X_group_privileged','X_group_read_only','X_row_etag','X_row_owner')
-FL.csv.filtered <- select(FL.csv.original, -c(csvFilterList))
+# filter out default columns starting with X_, age
+# just leave ID, location, gender and items 
+csvFilterList <- c('id', 'X_form_id','X_locale','X_savepoint_type','X_savepoint_timestamp','X_savepoint_creator','X_deleted','X_data_etag_at_modification','X_default_access','X_group_modify','X_group_privileged','X_group_read_only','X_row_etag','X_row_owner')
+FL.csv.filtered <- select(FL.csv.original, -c(csvFilterList)) %>% relocate(c(location,gender,age), .after = X_id) # filter out unneeded cols and reposition columns
 
 # change columns names item_01:item_10 to 1:10
-newcolnames <- c("Subj", "location", 1:10 )
+newcolnames <- c("Subj", "location", "gender", "age", 1:10 )
 colnames(FL.csv.filtered) <- newcolnames
 
 # tidy the data into columns: id, order, item
 FL.csv.tidy <- as.data.frame(gather(FL.csv.filtered, key = "Order", value = "CODE", '1':'10'))
 # Convert order column to numeric
-FL.csv.tidy$Order <-  as.numeric(as.character(FL.csv.tidy$Order))
+FL.csv.tidy$Order <-  as.numeric(as.character(FL.csv.tidy$Order)) %>% na_if("") %>% na.omit
+
 
 
 ######################
@@ -68,3 +68,4 @@ FL.salience.villageGroup <- FL.salience.villageGroup %>%
   na_if("") %>%
   # remove NAs
   na.omit
+

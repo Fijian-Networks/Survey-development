@@ -2,7 +2,13 @@ _element_key,_element_name,_element_type,_list_child_element_keys
 asset_wealth,asset_wealth,array,"[""asset_wealth_items""]"
 asset_wealth_items,items,string,[]
 contact_details,contact_details,string,[]
+contact_details_1,contact_details_1,string,[]
+contact_details_2,contact_details_2,string,[]
 contact_name,contact_name,string,[]
+contact_name_1,contact_name_1,string,[]
+contact_name_2,contact_name_2,string,[]
+contact_role_1,contact_role_1,string,[]
+contact_role_2,contact_role_2,string,[]
 crops_cassava,crops_cassava,integer,[]
 crops_kava,crops_kava,integer,[]
 crops_taro,crops_taro,integer,[]
