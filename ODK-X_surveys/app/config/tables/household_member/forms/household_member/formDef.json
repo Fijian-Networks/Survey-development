@@ -120,16 +120,6 @@
         "_row_num": 12
       },
       {
-        "choice_list_name": "ethnicity",
-        "data_value": "other",
-        "display": {
-          "title": {
-            "text": "Other"
-          }
-        },
-        "_row_num": 13
-      },
-      {
         "choice_list_name": "relationships",
         "data_value": "head",
         "display": {
@@ -988,16 +978,6 @@
             }
           },
           "_row_num": 12
-        },
-        {
-          "choice_list_name": "ethnicity",
-          "data_value": "other",
-          "display": {
-            "title": {
-              "text": "Other"
-            }
-          },
-          "_row_num": 13
         }
       ],
       "relationships": [
@@ -2762,7 +2742,7 @@
         "_aspect": "ethnicity",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"ethnicity\",\"data_value\":\"iTaukei\",\"display\":{\"title\":{\"text\":\"iTaukei\"}},\"_row_num\":8},{\"choice_list_name\":\"ethnicity\",\"data_value\":\"Solomoni\",\"display\":{\"title\":{\"text\":\"Solomoni\"}},\"_row_num\":9},{\"choice_list_name\":\"ethnicity\",\"data_value\":\"ni-vanuatu\",\"display\":{\"title\":{\"text\":\"Ni-Vanuatu\"}},\"_row_num\":10},{\"choice_list_name\":\"ethnicity\",\"data_value\":\"kai_india\",\"display\":{\"title\":{\"text\":\"Kai India\"}},\"_row_num\":11},{\"choice_list_name\":\"ethnicity\",\"data_value\":\"kai _oma\",\"display\":{\"title\":{\"text\":\"Kai Loma\"}},\"_row_num\":12},{\"choice_list_name\":\"ethnicity\",\"data_value\":\"other\",\"display\":{\"title\":{\"text\":\"Other\"}},\"_row_num\":13}]"
+        "_value": "[{\"choice_list_name\":\"ethnicity\",\"data_value\":\"iTaukei\",\"display\":{\"title\":{\"text\":\"iTaukei\"}},\"_row_num\":8},{\"choice_list_name\":\"ethnicity\",\"data_value\":\"Solomoni\",\"display\":{\"title\":{\"text\":\"Solomoni\"}},\"_row_num\":9},{\"choice_list_name\":\"ethnicity\",\"data_value\":\"ni-vanuatu\",\"display\":{\"title\":{\"text\":\"Ni-Vanuatu\"}},\"_row_num\":10},{\"choice_list_name\":\"ethnicity\",\"data_value\":\"kai_india\",\"display\":{\"title\":{\"text\":\"Kai India\"}},\"_row_num\":11},{\"choice_list_name\":\"ethnicity\",\"data_value\":\"kai _oma\",\"display\":{\"title\":{\"text\":\"Kai Loma\"}},\"_row_num\":12}]"
       },
       {
         "_partition": "Column",

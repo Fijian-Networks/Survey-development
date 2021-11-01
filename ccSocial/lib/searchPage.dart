@@ -48,7 +48,7 @@ class _SearchPageState extends State<SearchPage> {
 
     _rootDir = await ExtStorage.getExternalStorageDirectory();
     _odkxPersonInstanceDir = _rootDir +
-        "/opendatakit/default/data/tables/household_member/instances/";
+        "/opendatakit/FijiNetwork/data/tables/household_member/instances/";
     dbService.initDatabase();
 
     setState(() {
