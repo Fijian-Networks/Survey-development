@@ -871,7 +871,7 @@
         "name": "food_security",
         "display": {
           "prompt": {
-            "text": "In the last year has your household had enough food for three meals a day?"
+            "text": "In the last year, which of the following statements most accurately describes your food situation?"
           }
         },
         "_row_num": 3
@@ -3015,7 +3015,7 @@
             "name": "food_security",
             "display": {
               "prompt": {
-                "text": "In the last year has your household had enough food for three meals a day?"
+                "text": "In the last year, which of the following statements most accurately describes your food situation?"
               }
             },
             "_row_num": 3,

@@ -703,7 +703,7 @@
       },
       {
         "clause": "if",
-        "condition": "data('cq1_1_name') != (null)",
+        "condition": "data('cq1_2_name') != (null)",
         "comment": "need a lot of if statements",
         "_row_num": 18
       },
@@ -5842,7 +5842,7 @@
       {
         "type": "select_one",
         "values_list": "yesno",
-        "name": "participant_religion_role",
+        "name": "Details",
         "display": {
           "prompt": {
             "text": "Do you serve in any roles at the church (e.g., choir)?"
@@ -9656,12 +9656,7 @@
       },
       "participant_religion_role": {
         "type": "string",
-        "valuesList": "yesno",
         "_defn": [
-          {
-            "_row_num": 34,
-            "section_name": "rq"
-          },
           {
             "_row_num": 252,
             "section_name": "model"
@@ -9696,6 +9691,17 @@
           }
         ],
         "elementKey": "participant_household_itemsPurchased"
+      },
+      "Details": {
+        "_defn": [
+          {
+            "_row_num": 34,
+            "section_name": "rq"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "Details"
       }
     },
     "section_names": [
@@ -11261,7 +11267,7 @@
           },
           {
             "clause": "if",
-            "condition": "data('cq1_1_name') != (null)",
+            "condition": "data('cq1_2_name') != (null)",
             "comment": "need a lot of if statements",
             "_row_num": 18,
             "__rowNum__": 17,
@@ -20252,7 +20258,7 @@
           {
             "type": "select_one",
             "values_list": "yesno",
-            "name": "participant_religion_role",
+            "name": "Details",
             "display": {
               "prompt": {
                 "text": "Do you serve in any roles at the church (e.g., choir)?"
@@ -23672,12 +23678,7 @@
       },
       "participant_religion_role": {
         "type": "string",
-        "valuesList": "yesno",
         "_defn": [
-          {
-            "_row_num": 34,
-            "section_name": "rq"
-          },
           {
             "_row_num": 252,
             "section_name": "model"
@@ -23721,6 +23722,20 @@
         "elementName": "participant_household_itemsPurchased",
         "elementSet": "data",
         "elementPath": "participant_household_itemsPurchased"
+      },
+      "Details": {
+        "_defn": [
+          {
+            "_row_num": 34,
+            "section_name": "rq"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno",
+        "elementKey": "Details",
+        "elementName": "Details",
+        "elementSet": "data",
+        "elementPath": "Details"
       },
       "_id": {
         "type": "string",
@@ -23838,6 +23853,13 @@
     "properties": [
       {
         "_partition": "Column",
+        "_aspect": "Details",
+        "_key": "displayChoicesList",
+        "_type": "object",
+        "_value": "[{\"choice_list_name\":\"yesno\",\"data_value\":\"yes\",\"display\":{\"title\":{\"text\":\"Yes\"}},\"_row_num\":15},{\"choice_list_name\":\"yesno\",\"data_value\":\"no\",\"display\":{\"title\":{\"text\":\"No\"}},\"_row_num\":16}]"
+      },
+      {
+        "_partition": "Column",
         "_aspect": "cq1_1_item",
         "_key": "displayChoicesList",
         "_type": "object",
@@ -23888,13 +23910,6 @@
       {
         "_partition": "Column",
         "_aspect": "participant_religion_otherChurches",
-        "_key": "displayChoicesList",
-        "_type": "object",
-        "_value": "[{\"choice_list_name\":\"yesno\",\"data_value\":\"yes\",\"display\":{\"title\":{\"text\":\"Yes\"}},\"_row_num\":15},{\"choice_list_name\":\"yesno\",\"data_value\":\"no\",\"display\":{\"title\":{\"text\":\"No\"}},\"_row_num\":16}]"
-      },
-      {
-        "_partition": "Column",
-        "_aspect": "participant_religion_role",
         "_key": "displayChoicesList",
         "_type": "object",
         "_value": "[{\"choice_list_name\":\"yesno\",\"data_value\":\"yes\",\"display\":{\"title\":{\"text\":\"Yes\"}},\"_row_num\":15},{\"choice_list_name\":\"yesno\",\"data_value\":\"no\",\"display\":{\"title\":{\"text\":\"No\"}},\"_row_num\":16}]"

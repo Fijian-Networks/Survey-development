@@ -191,13 +191,23 @@
       },
       {
         "choice_list_name": "relationships",
+        "data_value": "step_father_mother",
+        "display": {
+          "title": {
+            "text": "Step Father/Mother"
+          }
+        },
+        "_row_num": 21
+      },
+      {
+        "choice_list_name": "relationships",
         "data_value": "step_sister_brother",
         "display": {
           "title": {
             "text": "Step Sister/Brother"
           }
         },
-        "_row_num": 21
+        "_row_num": 22
       },
       {
         "choice_list_name": "relationships",
@@ -207,7 +217,7 @@
             "text": "Step Son/Daughter"
           }
         },
-        "_row_num": 22
+        "_row_num": 23
       },
       {
         "choice_list_name": "relationships",
@@ -217,7 +227,7 @@
             "text": "Niece/Nephew"
           }
         },
-        "_row_num": 23
+        "_row_num": 24
       },
       {
         "choice_list_name": "relationships",
@@ -227,7 +237,7 @@
             "text": "Uncle/Aunt"
           }
         },
-        "_row_num": 24
+        "_row_num": 25
       },
       {
         "choice_list_name": "relationships",
@@ -237,7 +247,7 @@
             "text": "Son/Daughter in-law"
           }
         },
-        "_row_num": 25
+        "_row_num": 26
       },
       {
         "choice_list_name": "relationships",
@@ -247,7 +257,7 @@
             "text": "Father/Mother in-law"
           }
         },
-        "_row_num": 26
+        "_row_num": 27
       },
       {
         "choice_list_name": "relationships",
@@ -257,7 +267,7 @@
             "text": "Brother/Sister in-law"
           }
         },
-        "_row_num": 27
+        "_row_num": 28
       },
       {
         "choice_list_name": "relationships",
@@ -267,7 +277,7 @@
             "text": "Grandparent"
           }
         },
-        "_row_num": 28
+        "_row_num": 29
       },
       {
         "choice_list_name": "relationships",
@@ -277,7 +287,7 @@
             "text": "Other relative"
           }
         },
-        "_row_num": 29
+        "_row_num": 30
       },
       {
         "choice_list_name": "relationships",
@@ -287,7 +297,7 @@
             "text": "Non-relative"
           }
         },
-        "_row_num": 30
+        "_row_num": 31
       },
       {
         "choice_list_name": "marital_choices",
@@ -297,7 +307,7 @@
             "text": "Married"
           }
         },
-        "_row_num": 32
+        "_row_num": 33
       },
       {
         "choice_list_name": "marital_choices",
@@ -307,7 +317,7 @@
             "text": "Never Married"
           }
         },
-        "_row_num": 33
+        "_row_num": 34
       },
       {
         "choice_list_name": "marital_choices",
@@ -317,7 +327,7 @@
             "text": "Divorced"
           }
         },
-        "_row_num": 34
+        "_row_num": 35
       },
       {
         "choice_list_name": "marital_choices",
@@ -327,7 +337,7 @@
             "text": "Separated"
           }
         },
-        "_row_num": 35
+        "_row_num": 36
       },
       {
         "choice_list_name": "marital_choices",
@@ -337,7 +347,7 @@
             "text": "Widowed"
           }
         },
-        "_row_num": 36
+        "_row_num": 37
       }
     ],
     "settings": [
@@ -427,79 +437,84 @@
         "_row_num": 9
       },
       {
+        "name": "age_months",
+        "type": "integer",
+        "_row_num": 10
+      },
+      {
         "name": "sex",
         "type": "select_one",
-        "_row_num": 10
+        "_row_num": 11
       },
       {
         "name": "notes",
         "type": "text",
-        "_row_num": 11
+        "_row_num": 12
       },
       {
         "comment": "ethnicity",
         "name": "ethnicity",
         "type": "select_one_with_other",
-        "_row_num": 13
+        "_row_num": 14
       },
       {
         "comment": "demog_continued",
-        "_row_num": 15
+        "_row_num": 16
       },
       {
         "name": "relation_to_head",
         "type": "select_one",
-        "_row_num": 16
+        "_row_num": 17
       },
       {
         "name": "marital_status",
         "type": "select_one",
-        "_row_num": 17
+        "_row_num": 18
       },
       {
         "name": "customary_membership",
         "type": "select_one",
-        "_row_num": 18
+        "_row_num": 19
       },
       {
         "name": "education_years",
         "type": "integer",
-        "_row_num": 19
+        "_row_num": 20
       },
       {
         "name": "has_children",
         "type": "select_one",
-        "_row_num": 20
+        "_row_num": 21
       },
       {
         "name": "birthplace",
         "type": "text",
-        "_row_num": 21
+        "_row_num": 22
       },
       {
         "comment": "photo",
-        "_row_num": 23
+        "_row_num": 24
       },
       {
         "name": "person_photo",
         "type": "image",
-        "_row_num": 24
+        "_row_num": 25
       },
       {
         "comment": "assigned automatically",
         "name": "lives_in_household",
         "type": "select_one",
-        "_row_num": 26
+        "_row_num": 27
       },
       {
         "name": "is_alive",
         "type": "select_one",
-        "_row_num": 27
+        "_row_num": 28
       },
       {
         "name": "lives_fulltime",
         "type": "select_one",
-        "_row_num": 28
+        "_row_num": 29
       }
     ],
     "basic_demog": [
@@ -560,10 +575,20 @@
         "name": "age",
         "display": {
           "prompt": {
-            "text": "Age:"
+            "text": "Age (years):"
           }
         },
         "_row_num": 8
+      },
+      {
+        "type": "integer",
+        "name": "age_months",
+        "display": {
+          "prompt": {
+            "text": "Age (months):"
+          }
+        },
+        "_row_num": 9
       },
       {
         "type": "select_one",
@@ -574,15 +599,15 @@
             "text": "Sex:"
           }
         },
-        "_row_num": 9
-      },
-      {
-        "clause": "end screen",
         "_row_num": 10
       },
       {
+        "clause": "end screen",
+        "_row_num": 11
+      },
+      {
         "clause": "begin screen",
-        "_row_num": 12
+        "_row_num": 13
       },
       {
         "type": "note",
@@ -591,7 +616,7 @@
             "text": "Ethnicity Information"
           }
         },
-        "_row_num": 13
+        "_row_num": 14
       },
       {
         "type": "select_one_with_other",
@@ -602,29 +627,29 @@
             "text": "Choose or enter information about ethnicity:"
           }
         },
-        "_row_num": 14
+        "_row_num": 15
       },
       {
         "clause": "end screen",
-        "_row_num": 15
+        "_row_num": 16
       },
       {
         "comment": "assigns default yes to is_alive",
         "type": "assign",
         "name": "is_alive",
         "calculation": "\"yes\"",
-        "_row_num": 17
+        "_row_num": 18
       },
       {
         "comment": "assigns default yes to lives_fulltime",
         "type": "assign",
         "name": "lives_fulltime",
         "calculation": "\"yes\"",
-        "_row_num": 18
+        "_row_num": 19
       },
       {
         "clause": "begin screen",
-        "_row_num": 20
+        "_row_num": 21
       },
       {
         "type": "select_one",
@@ -635,7 +660,7 @@
             "text": "Does this person live here full time?"
           }
         },
-        "_row_num": 21
+        "_row_num": 22
       },
       {
         "type": "text",
@@ -645,7 +670,7 @@
             "text": "Please add any relevant information to help data analysis (ie: who do they live with part time if applicable):"
           }
         },
-        "_row_num": 22
+        "_row_num": 23
       },
       {
         "type": "select_one",
@@ -656,11 +681,11 @@
             "text": "Is this person alive?"
           }
         },
-        "_row_num": 23
+        "_row_num": 24
       },
       {
         "clause": "end screen",
-        "_row_num": 24
+        "_row_num": 25
       }
     ],
     "demog_continued": [
@@ -1038,13 +1063,23 @@
         },
         {
           "choice_list_name": "relationships",
+          "data_value": "step_father_mother",
+          "display": {
+            "title": {
+              "text": "Step Father/Mother"
+            }
+          },
+          "_row_num": 21
+        },
+        {
+          "choice_list_name": "relationships",
           "data_value": "step_sister_brother",
           "display": {
             "title": {
               "text": "Step Sister/Brother"
             }
           },
-          "_row_num": 21
+          "_row_num": 22
         },
         {
           "choice_list_name": "relationships",
@@ -1054,7 +1089,7 @@
               "text": "Step Son/Daughter"
             }
           },
-          "_row_num": 22
+          "_row_num": 23
         },
         {
           "choice_list_name": "relationships",
@@ -1064,7 +1099,7 @@
               "text": "Niece/Nephew"
             }
           },
-          "_row_num": 23
+          "_row_num": 24
         },
         {
           "choice_list_name": "relationships",
@@ -1074,7 +1109,7 @@
               "text": "Uncle/Aunt"
             }
           },
-          "_row_num": 24
+          "_row_num": 25
         },
         {
           "choice_list_name": "relationships",
@@ -1084,7 +1119,7 @@
               "text": "Son/Daughter in-law"
             }
           },
-          "_row_num": 25
+          "_row_num": 26
         },
         {
           "choice_list_name": "relationships",
@@ -1094,7 +1129,7 @@
               "text": "Father/Mother in-law"
             }
           },
-          "_row_num": 26
+          "_row_num": 27
         },
         {
           "choice_list_name": "relationships",
@@ -1104,7 +1139,7 @@
               "text": "Brother/Sister in-law"
             }
           },
-          "_row_num": 27
+          "_row_num": 28
         },
         {
           "choice_list_name": "relationships",
@@ -1114,7 +1149,7 @@
               "text": "Grandparent"
             }
           },
-          "_row_num": 28
+          "_row_num": 29
         },
         {
           "choice_list_name": "relationships",
@@ -1124,7 +1159,7 @@
               "text": "Other relative"
             }
           },
-          "_row_num": 29
+          "_row_num": 30
         },
         {
           "choice_list_name": "relationships",
@@ -1134,7 +1169,7 @@
               "text": "Non-relative"
             }
           },
-          "_row_num": 30
+          "_row_num": 31
         }
       ],
       "marital_choices": [
@@ -1146,7 +1181,7 @@
               "text": "Married"
             }
           },
-          "_row_num": 32
+          "_row_num": 33
         },
         {
           "choice_list_name": "marital_choices",
@@ -1156,7 +1191,7 @@
               "text": "Never Married"
             }
           },
-          "_row_num": 33
+          "_row_num": 34
         },
         {
           "choice_list_name": "marital_choices",
@@ -1166,7 +1201,7 @@
               "text": "Divorced"
             }
           },
-          "_row_num": 34
+          "_row_num": 35
         },
         {
           "choice_list_name": "marital_choices",
@@ -1176,7 +1211,7 @@
               "text": "Separated"
             }
           },
-          "_row_num": 35
+          "_row_num": 36
         },
         {
           "choice_list_name": "marital_choices",
@@ -1186,7 +1221,7 @@
               "text": "Widowed"
             }
           },
-          "_row_num": 36
+          "_row_num": 37
         }
       ]
     },
@@ -1287,9 +1322,8 @@
         ],
         "elementKey": "age"
       },
-      "sex": {
-        "type": "string",
-        "valuesList": "sexes",
+      "age_months": {
+        "type": "integer",
         "_defn": [
           {
             "_row_num": 9,
@@ -1300,17 +1334,32 @@
             "section_name": "model"
           }
         ],
+        "elementKey": "age_months"
+      },
+      "sex": {
+        "type": "string",
+        "valuesList": "sexes",
+        "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "basic_demog"
+          },
+          {
+            "_row_num": 11,
+            "section_name": "model"
+          }
+        ],
         "elementKey": "sex"
       },
       "notes": {
         "type": "string",
         "_defn": [
           {
-            "_row_num": 22,
+            "_row_num": 23,
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 11,
+            "_row_num": 12,
             "section_name": "model"
           }
         ],
@@ -1321,11 +1370,11 @@
         "valuesList": "ethnicity",
         "_defn": [
           {
-            "_row_num": 14,
+            "_row_num": 15,
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 13,
+            "_row_num": 14,
             "section_name": "model"
           }
         ],
@@ -1341,7 +1390,7 @@
             "section_name": "demog_continued"
           },
           {
-            "_row_num": 16,
+            "_row_num": 17,
             "section_name": "model"
           }
         ],
@@ -1356,7 +1405,7 @@
             "section_name": "demog_continued"
           },
           {
-            "_row_num": 17,
+            "_row_num": 18,
             "section_name": "model"
           }
         ],
@@ -1366,7 +1415,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 18,
+            "_row_num": 19,
             "section_name": "model"
           }
         ],
@@ -1380,7 +1429,7 @@
             "section_name": "demog_continued"
           },
           {
-            "_row_num": 19,
+            "_row_num": 20,
             "section_name": "model"
           }
         ],
@@ -1395,7 +1444,7 @@
             "section_name": "demog_continued"
           },
           {
-            "_row_num": 20,
+            "_row_num": 21,
             "section_name": "model"
           }
         ],
@@ -1409,7 +1458,7 @@
             "section_name": "demog_continued"
           },
           {
-            "_row_num": 21,
+            "_row_num": 22,
             "section_name": "model"
           }
         ],
@@ -1437,7 +1486,7 @@
             "section_name": "demog_continued"
           },
           {
-            "_row_num": 24,
+            "_row_num": 25,
             "section_name": "model"
           }
         ],
@@ -1447,7 +1496,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 26,
+            "_row_num": 27,
             "section_name": "model"
           }
         ],
@@ -1459,15 +1508,15 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 24,
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 17,
+            "_row_num": 18,
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 27,
+            "_row_num": 28,
             "section_name": "model"
           }
         ],
@@ -1478,15 +1527,15 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 21,
+            "_row_num": 22,
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 18,
+            "_row_num": 19,
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 28,
+            "_row_num": 29,
             "section_name": "model"
           }
         ],
@@ -1800,7 +1849,7 @@
             "name": "age",
             "display": {
               "prompt": {
-                "text": "Age:"
+                "text": "Age (years):"
               }
             },
             "_row_num": 8,
@@ -1811,6 +1860,21 @@
             "promptIdx": 5
           },
           {
+            "type": "integer",
+            "name": "age_months",
+            "display": {
+              "prompt": {
+                "text": "Age (months):"
+              }
+            },
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "basic_demog/_screen2",
+            "promptIdx": 6
+          },
+          {
             "type": "select_one",
             "values_list": "sexes",
             "name": "sex",
@@ -1819,12 +1883,12 @@
                 "text": "Sex:"
               }
             },
-            "_row_num": 9,
-            "__rowNum__": 8,
+            "_row_num": 10,
+            "__rowNum__": 9,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "basic_demog/_screen2",
-            "promptIdx": 6
+            "promptIdx": 7
           },
           {
             "type": "note",
@@ -1833,12 +1897,12 @@
                 "text": "Ethnicity Information"
               }
             },
-            "_row_num": 13,
-            "__rowNum__": 12,
+            "_row_num": 14,
+            "__rowNum__": 13,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "basic_demog/_screen12",
-            "promptIdx": 7
+            "_branch_label_enclosing_screen": "basic_demog/_screen13",
+            "promptIdx": 8
           },
           {
             "type": "select_one_with_other",
@@ -1849,12 +1913,12 @@
                 "text": "Choose or enter information about ethnicity:"
               }
             },
-            "_row_num": 14,
-            "__rowNum__": 13,
+            "_row_num": 15,
+            "__rowNum__": 14,
             "_token_type": "prompt",
             "_type": "select_one_with_other",
-            "_branch_label_enclosing_screen": "basic_demog/_screen12",
-            "promptIdx": 8
+            "_branch_label_enclosing_screen": "basic_demog/_screen13",
+            "promptIdx": 9
           },
           {
             "type": "select_one",
@@ -1865,12 +1929,12 @@
                 "text": "Does this person live here full time?"
               }
             },
-            "_row_num": 21,
-            "__rowNum__": 20,
+            "_row_num": 22,
+            "__rowNum__": 21,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "basic_demog/_screen20",
-            "promptIdx": 9
+            "_branch_label_enclosing_screen": "basic_demog/_screen21",
+            "promptIdx": 10
           },
           {
             "type": "text",
@@ -1880,12 +1944,12 @@
                 "text": "Please add any relevant information to help data analysis (ie: who do they live with part time if applicable):"
               }
             },
-            "_row_num": 22,
-            "__rowNum__": 21,
+            "_row_num": 23,
+            "__rowNum__": 22,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "basic_demog/_screen20",
-            "promptIdx": 10
+            "_branch_label_enclosing_screen": "basic_demog/_screen21",
+            "promptIdx": 11
           },
           {
             "type": "select_one",
@@ -1896,20 +1960,20 @@
                 "text": "Is this person alive?"
               }
             },
-            "_row_num": 23,
-            "__rowNum__": 22,
+            "_row_num": 24,
+            "__rowNum__": 23,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "basic_demog/_screen20",
-            "promptIdx": 11
+            "_branch_label_enclosing_screen": "basic_demog/_screen21",
+            "promptIdx": 12
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 25,
-            "_branch_label_enclosing_screen": "basic_demog/_screen25",
-            "promptIdx": 12
+            "_row_num": 26,
+            "_branch_label_enclosing_screen": "basic_demog/_screen26",
+            "promptIdx": 13
           }
         ],
         "validation_tag_map": {
@@ -1923,25 +1987,25 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 10,
-              "__rowNum__": 9,
+              "_row_num": 11,
+              "__rowNum__": 10,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "clause": "begin screen",
-            "_row_num": 12,
-            "__rowNum__": 11,
+            "_row_num": 13,
+            "__rowNum__": 12,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 15,
-              "__rowNum__": 14,
+              "_row_num": 16,
+              "__rowNum__": 15,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
@@ -1949,8 +2013,8 @@
             "type": "assign",
             "name": "is_alive",
             "calculation": "\"yes\"",
-            "_row_num": 17,
-            "__rowNum__": 16,
+            "_row_num": 18,
+            "__rowNum__": 17,
             "_token_type": "assign",
             "operationIdx": 2
           },
@@ -1959,35 +2023,35 @@
             "type": "assign",
             "name": "lives_fulltime",
             "calculation": "\"yes\"",
-            "_row_num": 18,
-            "__rowNum__": 17,
+            "_row_num": 19,
+            "__rowNum__": 18,
             "_token_type": "assign",
             "operationIdx": 3
           },
           {
             "clause": "begin screen",
-            "_row_num": 20,
-            "__rowNum__": 19,
+            "_row_num": 21,
+            "__rowNum__": 20,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 24,
-              "__rowNum__": 23,
+              "_row_num": 25,
+              "__rowNum__": 24,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 4
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 25,
+            "_row_num": 26,
             "operationIdx": 5
           },
           {
-            "_row_num": 25,
+            "_row_num": 26,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -1996,16 +2060,16 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 25,
+            "_row_num": 26,
             "operationIdx": 7
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
-          "_screen12": 1,
-          "_screen20": 4,
+          "_screen13": 1,
+          "_screen21": 4,
           "_contents": 6,
-          "_screen25": 6
+          "_screen26": 6
         }
       },
       "demog_continued": {
@@ -2290,9 +2354,8 @@
         "elementSet": "data",
         "elementPath": "age"
       },
-      "sex": {
-        "type": "string",
-        "valuesList": "sexes",
+      "age_months": {
+        "type": "integer",
         "_defn": [
           {
             "_row_num": 9,
@@ -2300,6 +2363,24 @@
           },
           {
             "_row_num": 10,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "age_months",
+        "elementName": "age_months",
+        "elementSet": "data",
+        "elementPath": "age_months"
+      },
+      "sex": {
+        "type": "string",
+        "valuesList": "sexes",
+        "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "basic_demog"
+          },
+          {
+            "_row_num": 11,
             "section_name": "model"
           }
         ],
@@ -2312,11 +2393,11 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 22,
+            "_row_num": 23,
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 11,
+            "_row_num": 12,
             "section_name": "model"
           }
         ],
@@ -2330,11 +2411,11 @@
         "valuesList": "ethnicity",
         "_defn": [
           {
-            "_row_num": 14,
+            "_row_num": 15,
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 13,
+            "_row_num": 14,
             "section_name": "model"
           }
         ],
@@ -2353,7 +2434,7 @@
             "section_name": "demog_continued"
           },
           {
-            "_row_num": 16,
+            "_row_num": 17,
             "section_name": "model"
           }
         ],
@@ -2371,7 +2452,7 @@
             "section_name": "demog_continued"
           },
           {
-            "_row_num": 17,
+            "_row_num": 18,
             "section_name": "model"
           }
         ],
@@ -2384,7 +2465,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 18,
+            "_row_num": 19,
             "section_name": "model"
           }
         ],
@@ -2401,7 +2482,7 @@
             "section_name": "demog_continued"
           },
           {
-            "_row_num": 19,
+            "_row_num": 20,
             "section_name": "model"
           }
         ],
@@ -2419,7 +2500,7 @@
             "section_name": "demog_continued"
           },
           {
-            "_row_num": 20,
+            "_row_num": 21,
             "section_name": "model"
           }
         ],
@@ -2436,7 +2517,7 @@
             "section_name": "demog_continued"
           },
           {
-            "_row_num": 21,
+            "_row_num": 22,
             "section_name": "model"
           }
         ],
@@ -2473,7 +2554,7 @@
             "section_name": "demog_continued"
           },
           {
-            "_row_num": 24,
+            "_row_num": 25,
             "section_name": "model"
           }
         ],
@@ -2491,7 +2572,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 26,
+            "_row_num": 27,
             "section_name": "model"
           }
         ],
@@ -2506,15 +2587,15 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 24,
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 17,
+            "_row_num": 18,
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 27,
+            "_row_num": 28,
             "section_name": "model"
           }
         ],
@@ -2528,15 +2609,15 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 21,
+            "_row_num": 22,
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 18,
+            "_row_num": 19,
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 28,
+            "_row_num": 29,
             "section_name": "model"
           }
         ],
@@ -2709,14 +2790,14 @@
         "_aspect": "marital_status",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"marital_choices\",\"data_value\":\"married\",\"display\":{\"title\":{\"text\":\"Married\"}},\"_row_num\":32},{\"choice_list_name\":\"marital_choices\",\"data_value\":\"never_married\",\"display\":{\"title\":{\"text\":\"Never Married\"}},\"_row_num\":33},{\"choice_list_name\":\"marital_choices\",\"data_value\":\"divorced\",\"display\":{\"title\":{\"text\":\"Divorced\"}},\"_row_num\":34},{\"choice_list_name\":\"marital_choices\",\"data_value\":\"separated\",\"display\":{\"title\":{\"text\":\"Separated\"}},\"_row_num\":35},{\"choice_list_name\":\"marital_choices\",\"data_value\":\"widowed\",\"display\":{\"title\":{\"text\":\"Widowed\"}},\"_row_num\":36}]"
+        "_value": "[{\"choice_list_name\":\"marital_choices\",\"data_value\":\"married\",\"display\":{\"title\":{\"text\":\"Married\"}},\"_row_num\":33},{\"choice_list_name\":\"marital_choices\",\"data_value\":\"never_married\",\"display\":{\"title\":{\"text\":\"Never Married\"}},\"_row_num\":34},{\"choice_list_name\":\"marital_choices\",\"data_value\":\"divorced\",\"display\":{\"title\":{\"text\":\"Divorced\"}},\"_row_num\":35},{\"choice_list_name\":\"marital_choices\",\"data_value\":\"separated\",\"display\":{\"title\":{\"text\":\"Separated\"}},\"_row_num\":36},{\"choice_list_name\":\"marital_choices\",\"data_value\":\"widowed\",\"display\":{\"title\":{\"text\":\"Widowed\"}},\"_row_num\":37}]"
       },
       {
         "_partition": "Column",
         "_aspect": "relation_to_head",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"relationships\",\"data_value\":\"head\",\"display\":{\"title\":{\"text\":\"Head\"}},\"_row_num\":15},{\"choice_list_name\":\"relationships\",\"data_value\":\"spouse\",\"display\":{\"title\":{\"text\":\"Spouse\"}},\"_row_num\":16},{\"choice_list_name\":\"relationships\",\"data_value\":\"son_daughter\",\"display\":{\"title\":{\"text\":\"Son/Daughter\"}},\"_row_num\":17},{\"choice_list_name\":\"relationships\",\"data_value\":\"grandchild\",\"display\":{\"title\":{\"text\":\"Grandchild\"}},\"_row_num\":18},{\"choice_list_name\":\"relationships\",\"data_value\":\"father_mother\",\"display\":{\"title\":{\"text\":\"Father/Mother\"}},\"_row_num\":19},{\"choice_list_name\":\"relationships\",\"data_value\":\"sister_brother\",\"display\":{\"title\":{\"text\":\"Sister/Brother\"}},\"_row_num\":20},{\"choice_list_name\":\"relationships\",\"data_value\":\"step_sister_brother\",\"display\":{\"title\":{\"text\":\"Step Sister/Brother\"}},\"_row_num\":21},{\"choice_list_name\":\"relationships\",\"data_value\":\"step_son_daughter\",\"display\":{\"title\":{\"text\":\"Step Son/Daughter\"}},\"_row_num\":22},{\"choice_list_name\":\"relationships\",\"data_value\":\"niece_nephew\",\"display\":{\"title\":{\"text\":\"Niece/Nephew\"}},\"_row_num\":23},{\"choice_list_name\":\"relationships\",\"data_value\":\"uncle_aunt\",\"display\":{\"title\":{\"text\":\"Uncle/Aunt\"}},\"_row_num\":24},{\"choice_list_name\":\"relationships\",\"data_value\":\"in_law_son_daughter\",\"display\":{\"title\":{\"text\":\"Son/Daughter in-law\"}},\"_row_num\":25},{\"choice_list_name\":\"relationships\",\"data_value\":\"in_law_father_mother\",\"display\":{\"title\":{\"text\":\"Father/Mother in-law\"}},\"_row_num\":26},{\"choice_list_name\":\"relationships\",\"data_value\":\"in_law_brother_sister\",\"display\":{\"title\":{\"text\":\"Brother/Sister in-law\"}},\"_row_num\":27},{\"choice_list_name\":\"relationships\",\"data_value\":\"grandparent\",\"display\":{\"title\":{\"text\":\"Grandparent\"}},\"_row_num\":28},{\"choice_list_name\":\"relationships\",\"data_value\":\"other_relative\",\"display\":{\"title\":{\"text\":\"Other relative\"}},\"_row_num\":29},{\"choice_list_name\":\"relationships\",\"data_value\":\"non_relative\",\"display\":{\"title\":{\"text\":\"Non-relative\"}},\"_row_num\":30}]"
+        "_value": "[{\"choice_list_name\":\"relationships\",\"data_value\":\"head\",\"display\":{\"title\":{\"text\":\"Head\"}},\"_row_num\":15},{\"choice_list_name\":\"relationships\",\"data_value\":\"spouse\",\"display\":{\"title\":{\"text\":\"Spouse\"}},\"_row_num\":16},{\"choice_list_name\":\"relationships\",\"data_value\":\"son_daughter\",\"display\":{\"title\":{\"text\":\"Son/Daughter\"}},\"_row_num\":17},{\"choice_list_name\":\"relationships\",\"data_value\":\"grandchild\",\"display\":{\"title\":{\"text\":\"Grandchild\"}},\"_row_num\":18},{\"choice_list_name\":\"relationships\",\"data_value\":\"father_mother\",\"display\":{\"title\":{\"text\":\"Father/Mother\"}},\"_row_num\":19},{\"choice_list_name\":\"relationships\",\"data_value\":\"sister_brother\",\"display\":{\"title\":{\"text\":\"Sister/Brother\"}},\"_row_num\":20},{\"choice_list_name\":\"relationships\",\"data_value\":\"step_father_mother\",\"display\":{\"title\":{\"text\":\"Step Father/Mother\"}},\"_row_num\":21},{\"choice_list_name\":\"relationships\",\"data_value\":\"step_sister_brother\",\"display\":{\"title\":{\"text\":\"Step Sister/Brother\"}},\"_row_num\":22},{\"choice_list_name\":\"relationships\",\"data_value\":\"step_son_daughter\",\"display\":{\"title\":{\"text\":\"Step Son/Daughter\"}},\"_row_num\":23},{\"choice_list_name\":\"relationships\",\"data_value\":\"niece_nephew\",\"display\":{\"title\":{\"text\":\"Niece/Nephew\"}},\"_row_num\":24},{\"choice_list_name\":\"relationships\",\"data_value\":\"uncle_aunt\",\"display\":{\"title\":{\"text\":\"Uncle/Aunt\"}},\"_row_num\":25},{\"choice_list_name\":\"relationships\",\"data_value\":\"in_law_son_daughter\",\"display\":{\"title\":{\"text\":\"Son/Daughter in-law\"}},\"_row_num\":26},{\"choice_list_name\":\"relationships\",\"data_value\":\"in_law_father_mother\",\"display\":{\"title\":{\"text\":\"Father/Mother in-law\"}},\"_row_num\":27},{\"choice_list_name\":\"relationships\",\"data_value\":\"in_law_brother_sister\",\"display\":{\"title\":{\"text\":\"Brother/Sister in-law\"}},\"_row_num\":28},{\"choice_list_name\":\"relationships\",\"data_value\":\"grandparent\",\"display\":{\"title\":{\"text\":\"Grandparent\"}},\"_row_num\":29},{\"choice_list_name\":\"relationships\",\"data_value\":\"other_relative\",\"display\":{\"title\":{\"text\":\"Other relative\"}},\"_row_num\":30},{\"choice_list_name\":\"relationships\",\"data_value\":\"non_relative\",\"display\":{\"title\":{\"text\":\"Non-relative\"}},\"_row_num\":31}]"
       },
       {
         "_partition": "Column",

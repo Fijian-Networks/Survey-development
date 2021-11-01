@@ -493,38 +493,6 @@
           }
         },
         "_row_num": 8
-      },
-      {
-        "choice_list_name": "forms",
-        "data_value": "household_member",
-        "display": {
-          "title": {
-            "text": ".(member subform)"
-          }
-        },
-        "comment": "These forms are called from other forms",
-        "_row_num": 10
-      },
-      {
-        "choice_list_name": "forms",
-        "data_value": "marriages",
-        "display": {
-          "title": {
-            "text": ".(marriages subform)"
-          }
-        },
-        "comment": "These are not to be used on their own",
-        "_row_num": 11
-      },
-      {
-        "choice_list_name": "forms",
-        "data_value": "families",
-        "display": {
-          "title": {
-            "text": ".(families subform)"
-          }
-        },
-        "_row_num": 12
       }
     ],
     "survey": [
@@ -835,38 +803,6 @@
             }
           },
           "_row_num": 8
-        },
-        {
-          "choice_list_name": "forms",
-          "data_value": "household_member",
-          "display": {
-            "title": {
-              "text": ".(member subform)"
-            }
-          },
-          "comment": "These forms are called from other forms",
-          "_row_num": 10
-        },
-        {
-          "choice_list_name": "forms",
-          "data_value": "marriages",
-          "display": {
-            "title": {
-              "text": ".(marriages subform)"
-            }
-          },
-          "comment": "These are not to be used on their own",
-          "_row_num": 11
-        },
-        {
-          "choice_list_name": "forms",
-          "data_value": "families",
-          "display": {
-            "title": {
-              "text": ".(families subform)"
-            }
-          },
-          "_row_num": 12
         }
       ]
     },
@@ -1829,3 +1765,5 @@
     ]
   }
 }
+could not find setting with name: framework_variant
+could not find setting with name: framework_variant
