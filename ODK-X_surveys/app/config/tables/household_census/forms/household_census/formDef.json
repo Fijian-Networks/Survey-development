@@ -18,53 +18,34 @@
         "_row_num": 5
       },
       {
-        "comments": "customary membership for household",
-        "clause": "do section customary_membership",
-        "_row_num": 7
-      },
-      {
         "comments": "Person node creation",
         "clause": "do section members",
-        "_row_num": 9
+        "_row_num": 7
       },
       {
         "comments": "Marriage edgelist creation",
         "clause": "do section marriages",
-        "_row_num": 11
+        "_row_num": 9
       },
       {
         "comments": "Family edgelist creation",
         "clause": "do section families",
-        "_row_num": 13
-      },
-      {
-        "comments": "Household node attributes",
-        "_row_num": 14
-      },
-      {
-        "comments": "asset wealth",
-        "clause": "do section asset_wealth",
-        "_row_num": 15
-      },
-      {
-        "comments": "income of head and spouse",
-        "clause": "do section income",
-        "_row_num": 16
+        "_row_num": 11
       },
       {
         "comments": "food security",
         "clause": "do section food_security",
-        "_row_num": 17
-      },
-      {
-        "comments": "crops and fishing",
-        "clause": "do section crops_fishing",
-        "_row_num": 18
+        "_row_num": 13
       },
       {
         "comments": "Contact information",
         "clause": "do section contact_information",
-        "_row_num": 20
+        "_row_num": 15
+      },
+      {
+        "comments": "assign head and spouse",
+        "clause": "do section assign_head",
+        "_row_num": 17
       }
     ],
     "choices": [
@@ -331,7 +312,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 2,
+        "value": 2.1,
         "_row_num": 3
       },
       {
@@ -491,6 +472,7 @@
       {
         "name": "household_id",
         "type": "text",
+        "comments": "readable id",
         "_row_num": 2
       },
       {
@@ -499,89 +481,69 @@
         "_row_num": 3
       },
       {
-        "name": "tokatoka",
-        "type": "text",
+        "name": "food_security_1",
+        "type": "integer",
         "_row_num": 5
       },
       {
-        "name": "yavusa",
-        "type": "text",
+        "name": "food_security_2",
+        "type": "integer",
         "_row_num": 6
       },
       {
-        "name": "mataquali",
-        "type": "text",
+        "name": "food_security_3",
+        "type": "integer",
         "_row_num": 7
       },
       {
-        "name": "membership_notes",
+        "name": "head_id",
         "type": "text",
-        "_row_num": 9
+        "_row_num": 12
       },
       {
-        "name": "asset_wealth",
-        "type": "select_multiple",
-        "_row_num": 11
-      },
-      {
-        "name": "income_head_amount",
-        "type": "integer",
+        "name": "head_name",
+        "type": "text",
         "_row_num": 13
       },
       {
-        "name": "income_head_source",
+        "name": "spouse_id",
         "type": "text",
         "_row_num": 14
       },
       {
-        "name": "income_spouse_amount",
-        "type": "integer",
+        "name": "spouse_name",
+        "type": "text",
         "_row_num": 15
       },
       {
-        "name": "income_spouse_source",
+        "name": "contact_name_1",
         "type": "text",
-        "_row_num": 16
+        "_row_num": 17
       },
       {
-        "name": "food_security",
-        "type": "select_one_integer",
+        "name": "contact_role_1",
+        "type": "select_one",
         "_row_num": 18
       },
       {
-        "name": "crops_kava",
-        "type": "integer",
-        "_row_num": 20
+        "name": "contact_details_1",
+        "type": "text",
+        "_row_num": 19
       },
       {
-        "name": "crops_taro",
-        "type": "integer",
+        "name": "contact_name_2",
+        "type": "text",
         "_row_num": 21
       },
       {
-        "name": "crops_cassava",
-        "type": "integer",
+        "name": "contact_role_2",
+        "type": "select_one",
         "_row_num": 22
       },
       {
-        "name": "fish_days",
-        "type": "integer",
+        "name": "contact_details_2",
+        "type": "text",
         "_row_num": 23
-      },
-      {
-        "name": "fish_catch",
-        "type": "integer",
-        "_row_num": 24
-      },
-      {
-        "name": "contact_name",
-        "type": "text",
-        "_row_num": 26
-      },
-      {
-        "name": "contact_details",
-        "type": "text",
-        "_row_num": 27
       }
     ],
     "id": [
@@ -634,69 +596,6 @@
       {
         "clause": "end screen",
         "_row_num": 7
-      }
-    ],
-    "customary_membership": [
-      {
-        "comments": "Collect customary membership details",
-        "_row_num": 2
-      },
-      {
-        "clause": "begin screen",
-        "_row_num": 3
-      },
-      {
-        "type": "note",
-        "display": {
-          "prompt": {
-            "text": "Customary Membership Information:"
-          }
-        },
-        "_row_num": 4
-      },
-      {
-        "type": "text",
-        "name": "tokatoka",
-        "display": {
-          "prompt": {
-            "text": "Tokatoka:"
-          }
-        },
-        "_row_num": 5
-      },
-      {
-        "type": "text",
-        "name": "yavusa",
-        "display": {
-          "prompt": {
-            "text": "Yavusa:"
-          }
-        },
-        "_row_num": 6
-      },
-      {
-        "type": "text",
-        "name": "mataqali",
-        "display": {
-          "prompt": {
-            "text": "Mataqali:"
-          }
-        },
-        "_row_num": 7
-      },
-      {
-        "type": "text",
-        "name": "membership_notes",
-        "display": {
-          "prompt": {
-            "text": "Extra Notes:"
-          }
-        },
-        "_row_num": 8
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 9
       }
     ],
     "members": [
@@ -789,156 +688,44 @@
         "_row_num": 6
       }
     ],
-    "asset_wealth": [
-      {
-        "clause": "begin screen",
-        "_row_num": 2
-      },
-      {
-        "type": "select_multiple",
-        "values_list": "asset_inventory",
-        "name": "asset_wealth",
-        "display": {
-          "prompt": {
-            "text": "Select which of the following items are present in the household:"
-          }
-        },
-        "_row_num": 4
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 5
-      }
-    ],
-    "income": [
-      {
-        "clause": "begin screen",
-        "_row_num": 2
-      },
-      {
-        "type": "integer",
-        "name": "income_head_amount",
-        "display": {
-          "prompt": {
-            "text": "How much money did you earn in the past week?"
-          }
-        },
-        "_row_num": 3
-      },
-      {
-        "type": "text",
-        "name": "income_head_source",
-        "display": {
-          "prompt": {
-            "text": "How did you earn this money?"
-          }
-        },
-        "_row_num": 4
-      },
-      {
-        "type": "integer",
-        "name": "income_spouse_amount",
-        "display": {
-          "prompt": {
-            "text": "How much money did your spouse earn in the past week?"
-          }
-        },
-        "_row_num": 5
-      },
-      {
-        "type": "text",
-        "name": "income_spouse_source",
-        "display": {
-          "prompt": {
-            "text": "How did they earn this money?"
-          }
-        },
-        "_row_num": 6
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 7
-      }
-    ],
     "food_security": [
       {
         "clause": "begin screen",
         "_row_num": 2
       },
       {
-        "type": "select_one_integer",
-        "values_list": "food_security_list",
-        "name": "food_security",
-        "display": {
-          "prompt": {
-            "text": "In the last year, which of the following statements most accurately describes your food situation?"
-          }
-        },
-        "_row_num": 3
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 4
-      }
-    ],
-    "crops_fishing": [
-      {
-        "clause": "begin screen",
-        "_row_num": 2
-      },
-      {
         "type": "integer",
-        "name": "crops_kava",
+        "name": "food_security_1",
         "display": {
           "prompt": {
-            "text": "Approximately how many kava plants do you have currently under cultivation?"
+            "text": "How many times in the last WEEK have you not had enough food to feed everyone?"
           }
         },
         "_row_num": 3
       },
       {
         "type": "integer",
-        "name": "crops_taro",
+        "name": "food_security_2",
         "display": {
           "prompt": {
-            "text": "Approximately how many taro plants do you have currently under cultivation?"
+            "text": "How many times in the last MONTH?"
           }
         },
         "_row_num": 4
       },
       {
         "type": "integer",
-        "name": "crops_cassava",
+        "name": "food_security_3",
         "display": {
           "prompt": {
-            "text": "Approximately how many cassava plants do you have currently under cultivation?"
+            "text": "How many times in the last YEAR?"
           }
         },
         "_row_num": 5
       },
       {
-        "type": "integer",
-        "name": "fish_days",
-        "display": {
-          "prompt": {
-            "text": "In an average week, how many days do members of your household go fishing?"
-          }
-        },
-        "_row_num": 6
-      },
-      {
-        "type": "integer",
-        "name": "fish_catch",
-        "display": {
-          "prompt": {
-            "text": "On average, how many fish are caught when out fishing?"
-          }
-        },
-        "_row_num": 7
-      },
-      {
         "clause": "end screen",
-        "_row_num": 8
+        "_row_num": 6
       }
     ],
     "contact_information": [
@@ -1053,6 +840,38 @@
         "clause": "end screen",
         "_row_num": 16
       }
+    ],
+    "assign_head": [
+      {
+        "clause": "begin screen",
+        "_row_num": 2
+      },
+      {
+        "type": "select_one",
+        "values_list": "linked_household_member",
+        "name": "household_head_uuid",
+        "display": {
+          "prompt": {
+            "text": "Select the head of household."
+          }
+        },
+        "_row_num": 3
+      },
+      {
+        "type": "select_one",
+        "values_list": "linked_household_member",
+        "name": "household_spouse_uuid",
+        "display": {
+          "prompt": {
+            "text": "Select their spouse."
+          }
+        },
+        "_row_num": 4
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 5
+      }
     ]
   },
   "specification": {
@@ -1080,7 +899,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 2,
+        "value": 2.1,
         "_row_num": 3
       },
       "table_id": {
@@ -1210,6 +1029,13 @@
           }
         },
         "_row_num": 6
+      },
+      "assign_head": {
+        "display": {
+          "title": {
+            "text": "Household Survey"
+          }
+        }
       },
       "contact_information": {
         "display": {
@@ -1567,237 +1393,173 @@
         ],
         "elementKey": "household_village"
       },
-      "tokatoka": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 5,
-            "section_name": "customary_membership"
-          },
-          {
-            "_row_num": 5,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "tokatoka"
-      },
-      "yavusa": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 6,
-            "section_name": "customary_membership"
-          },
-          {
-            "_row_num": 6,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "yavusa"
-      },
-      "mataquali": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 7,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "mataquali"
-      },
-      "membership_notes": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 8,
-            "section_name": "customary_membership"
-          },
-          {
-            "_row_num": 9,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "membership_notes"
-      },
-      "asset_wealth": {
-        "type": "array",
-        "items": {
-          "type": "string",
-          "elementKey": "asset_wealth_items"
-        },
-        "valuesList": "asset_inventory",
-        "_defn": [
-          {
-            "_row_num": 4,
-            "section_name": "asset_wealth"
-          },
-          {
-            "_row_num": 11,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "asset_wealth"
-      },
-      "income_head_amount": {
+      "food_security_1": {
         "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 3,
-            "section_name": "income"
-          },
-          {
-            "_row_num": 13,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "income_head_amount"
-      },
-      "income_head_source": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 4,
-            "section_name": "income"
-          },
-          {
-            "_row_num": 14,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "income_head_source"
-      },
-      "income_spouse_amount": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 5,
-            "section_name": "income"
-          },
-          {
-            "_row_num": 15,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "income_spouse_amount"
-      },
-      "income_spouse_source": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 6,
-            "section_name": "income"
-          },
-          {
-            "_row_num": 16,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "income_spouse_source"
-      },
-      "food_security": {
-        "type": "integer",
-        "valuesList": "food_security_list",
         "_defn": [
           {
             "_row_num": 3,
             "section_name": "food_security"
           },
           {
-            "_row_num": 18,
+            "_row_num": 5,
             "section_name": "model"
           }
         ],
-        "elementKey": "food_security"
+        "elementKey": "food_security_1"
       },
-      "crops_kava": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 3,
-            "section_name": "crops_fishing"
-          },
-          {
-            "_row_num": 20,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "crops_kava"
-      },
-      "crops_taro": {
+      "food_security_2": {
         "type": "integer",
         "_defn": [
           {
             "_row_num": 4,
-            "section_name": "crops_fishing"
+            "section_name": "food_security"
+          },
+          {
+            "_row_num": 6,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "food_security_2"
+      },
+      "food_security_3": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "food_security"
+          },
+          {
+            "_row_num": 7,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "food_security_3"
+      },
+      "head_id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "head_id"
+      },
+      "head_name": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 13,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "head_name"
+      },
+      "spouse_id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "spouse_id"
+      },
+      "spouse_name": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "spouse_name"
+      },
+      "contact_name_1": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "contact_information"
+          },
+          {
+            "_row_num": 17,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "contact_name_1"
+      },
+      "contact_role_1": {
+        "type": "string",
+        "valuesList": "contact_roles",
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "contact_information"
+          },
+          {
+            "_row_num": 18,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "contact_role_1"
+      },
+      "contact_details_1": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "contact_information"
+          },
+          {
+            "_row_num": 19,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "contact_details_1"
+      },
+      "contact_name_2": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "contact_information"
           },
           {
             "_row_num": 21,
             "section_name": "model"
           }
         ],
-        "elementKey": "crops_taro"
+        "elementKey": "contact_name_2"
       },
-      "crops_cassava": {
-        "type": "integer",
+      "contact_role_2": {
+        "type": "string",
+        "valuesList": "contact_roles",
         "_defn": [
           {
-            "_row_num": 5,
-            "section_name": "crops_fishing"
+            "_row_num": 13,
+            "section_name": "contact_information"
           },
           {
             "_row_num": 22,
             "section_name": "model"
           }
         ],
-        "elementKey": "crops_cassava"
+        "elementKey": "contact_role_2"
       },
-      "fish_days": {
-        "type": "integer",
+      "contact_details_2": {
+        "type": "string",
         "_defn": [
           {
-            "_row_num": 6,
-            "section_name": "crops_fishing"
+            "_row_num": 14,
+            "section_name": "contact_information"
           },
           {
             "_row_num": 23,
             "section_name": "model"
           }
         ],
-        "elementKey": "fish_days"
-      },
-      "fish_catch": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 7,
-            "section_name": "crops_fishing"
-          },
-          {
-            "_row_num": 24,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "fish_catch"
-      },
-      "contact_name": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 26,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "contact_name"
-      },
-      "contact_details": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 27,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "contact_details"
+        "elementKey": "contact_details_2"
       },
       "household_image": {
         "_defn": [
@@ -1862,88 +1624,35 @@
         "type": "string",
         "elementKey": "household_human_id"
       },
-      "mataqali": {
+      "household_head_uuid": {
         "_defn": [
           {
-            "_row_num": 7,
-            "section_name": "customary_membership"
+            "_row_num": 3,
+            "section_name": "assign_head"
           }
         ],
         "type": "string",
-        "elementKey": "mataqali"
+        "valuesList": "linked_household_member",
+        "elementKey": "household_head_uuid"
       },
-      "contact_name_1": {
+      "household_spouse_uuid": {
         "_defn": [
           {
-            "_row_num": 6,
-            "section_name": "contact_information"
+            "_row_num": 4,
+            "section_name": "assign_head"
           }
         ],
         "type": "string",
-        "elementKey": "contact_name_1"
-      },
-      "contact_role_1": {
-        "_defn": [
-          {
-            "_row_num": 7,
-            "section_name": "contact_information"
-          }
-        ],
-        "type": "string",
-        "valuesList": "contact_roles",
-        "elementKey": "contact_role_1"
-      },
-      "contact_details_1": {
-        "_defn": [
-          {
-            "_row_num": 8,
-            "section_name": "contact_information"
-          }
-        ],
-        "type": "string",
-        "elementKey": "contact_details_1"
-      },
-      "contact_name_2": {
-        "_defn": [
-          {
-            "_row_num": 12,
-            "section_name": "contact_information"
-          }
-        ],
-        "type": "string",
-        "elementKey": "contact_name_2"
-      },
-      "contact_role_2": {
-        "_defn": [
-          {
-            "_row_num": 13,
-            "section_name": "contact_information"
-          }
-        ],
-        "type": "string",
-        "valuesList": "contact_roles",
-        "elementKey": "contact_role_2"
-      },
-      "contact_details_2": {
-        "_defn": [
-          {
-            "_row_num": 14,
-            "section_name": "contact_information"
-          }
-        ],
-        "type": "string",
-        "elementKey": "contact_details_2"
+        "valuesList": "linked_household_member",
+        "elementKey": "household_spouse_uuid"
       }
     },
     "section_names": [
-      "asset_wealth",
+      "assign_head",
       "contact_information",
-      "crops_fishing",
-      "customary_membership",
       "families",
       "food_security",
       "id",
-      "income",
       "initial",
       "marriages",
       "members",
@@ -1954,27 +1663,21 @@
         "section_name": "survey",
         "nested_sections": {
           "id": true,
-          "customary_membership": true,
           "members": true,
           "marriages": true,
           "families": true,
-          "asset_wealth": true,
-          "income": true,
           "food_security": true,
-          "crops_fishing": true,
-          "contact_information": true
+          "contact_information": true,
+          "assign_head": true
         },
         "reachable_sections": {
           "id": true,
-          "customary_membership": true,
           "members": true,
           "marriages": true,
           "families": true,
-          "asset_wealth": true,
-          "income": true,
           "food_security": true,
-          "crops_fishing": true,
-          "contact_information": true
+          "contact_information": true,
+          "assign_head": true
         },
         "prompts": [
           {
@@ -1994,30 +1697,14 @@
             "_branch_label_enclosing_screen": "id/0"
           },
           {
-            "comments": "customary membership for household",
-            "clause": "do section customary_membership",
+            "comments": "Person node creation",
+            "clause": "do section members",
             "_row_num": 7,
             "__rowNum__": 6,
             "_token_type": "prompt",
-            "_do_section_name": "customary_membership",
-            "_type": "_section",
-            "promptIdx": 1,
-            "display": {
-              "title": {
-                "text": "Customary Membership"
-              }
-            },
-            "_branch_label_enclosing_screen": "customary_membership/0"
-          },
-          {
-            "comments": "Person node creation",
-            "clause": "do section members",
-            "_row_num": 9,
-            "__rowNum__": 8,
-            "_token_type": "prompt",
             "_do_section_name": "members",
             "_type": "_section",
-            "promptIdx": 2,
+            "promptIdx": 1,
             "display": {
               "title": {
                 "text": "Household Members"
@@ -2028,12 +1715,12 @@
           {
             "comments": "Marriage edgelist creation",
             "clause": "do section marriages",
-            "_row_num": 11,
-            "__rowNum__": 10,
+            "_row_num": 9,
+            "__rowNum__": 8,
             "_token_type": "prompt",
             "_do_section_name": "marriages",
             "_type": "_section",
-            "promptIdx": 3,
+            "promptIdx": 2,
             "display": {
               "title": {
                 "text": "Marriage Information"
@@ -2044,12 +1731,12 @@
           {
             "comments": "Family edgelist creation",
             "clause": "do section families",
-            "_row_num": 13,
-            "__rowNum__": 12,
+            "_row_num": 11,
+            "__rowNum__": 10,
             "_token_type": "prompt",
             "_do_section_name": "families",
             "_type": "_section",
-            "promptIdx": 4,
+            "promptIdx": 3,
             "display": {
               "title": {
                 "text": "Family unit information"
@@ -2058,46 +1745,14 @@
             "_branch_label_enclosing_screen": "families/0"
           },
           {
-            "comments": "asset wealth",
-            "clause": "do section asset_wealth",
-            "_row_num": 15,
-            "__rowNum__": 14,
-            "_token_type": "prompt",
-            "_do_section_name": "asset_wealth",
-            "_type": "_section",
-            "promptIdx": 5,
-            "display": {
-              "title": {
-                "text": "Household Asset Inventory/Wealth"
-              }
-            },
-            "_branch_label_enclosing_screen": "asset_wealth/0"
-          },
-          {
-            "comments": "income of head and spouse",
-            "clause": "do section income",
-            "_row_num": 16,
-            "__rowNum__": 15,
-            "_token_type": "prompt",
-            "_do_section_name": "income",
-            "_type": "_section",
-            "promptIdx": 6,
-            "display": {
-              "title": {
-                "text": "Income of Head and Spouse"
-              }
-            },
-            "_branch_label_enclosing_screen": "income/0"
-          },
-          {
             "comments": "food security",
             "clause": "do section food_security",
-            "_row_num": 17,
-            "__rowNum__": 16,
+            "_row_num": 13,
+            "__rowNum__": 12,
             "_token_type": "prompt",
             "_do_section_name": "food_security",
             "_type": "_section",
-            "promptIdx": 7,
+            "promptIdx": 4,
             "display": {
               "title": {
                 "text": "Food Security"
@@ -2106,30 +1761,14 @@
             "_branch_label_enclosing_screen": "food_security/0"
           },
           {
-            "comments": "crops and fishing",
-            "clause": "do section crops_fishing",
-            "_row_num": 18,
-            "__rowNum__": 17,
-            "_token_type": "prompt",
-            "_do_section_name": "crops_fishing",
-            "_type": "_section",
-            "promptIdx": 8,
-            "display": {
-              "title": {
-                "text": "Crops under Cultivation/Fishing"
-              }
-            },
-            "_branch_label_enclosing_screen": "crops_fishing/0"
-          },
-          {
             "comments": "Contact information",
             "clause": "do section contact_information",
-            "_row_num": 20,
-            "__rowNum__": 19,
+            "_row_num": 15,
+            "__rowNum__": 14,
             "_token_type": "prompt",
             "_do_section_name": "contact_information",
             "_type": "_section",
-            "promptIdx": 9,
+            "promptIdx": 5,
             "display": {
               "title": {
                 "text": "Household Survey"
@@ -2138,12 +1777,28 @@
             "_branch_label_enclosing_screen": "contact_information/0"
           },
           {
+            "comments": "assign head and spouse",
+            "clause": "do section assign_head",
+            "_row_num": 17,
+            "__rowNum__": 16,
+            "_token_type": "prompt",
+            "_do_section_name": "assign_head",
+            "_type": "_section",
+            "promptIdx": 6,
+            "display": {
+              "title": {
+                "text": "Household Survey"
+              }
+            },
+            "_branch_label_enclosing_screen": "assign_head/0"
+          },
+          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 21,
-            "_branch_label_enclosing_screen": "survey/_screen21",
-            "promptIdx": 10
+            "_row_num": 18,
+            "_branch_label_enclosing_screen": "survey/_screen18",
+            "promptIdx": 7
           }
         ],
         "validation_tag_map": {
@@ -2170,111 +1825,84 @@
             "operationIdx": 1
           },
           {
-            "comments": "customary membership for household",
-            "clause": "do section customary_membership",
+            "comments": "Person node creation",
+            "clause": "do section members",
             "_row_num": 7,
             "__rowNum__": 6,
             "_token_type": "do_section",
-            "_do_section_name": "customary_membership",
-            "operationIdx": 2
-          },
-          {
-            "comments": "Person node creation",
-            "clause": "do section members",
-            "_row_num": 9,
-            "__rowNum__": 8,
-            "_token_type": "do_section",
             "_do_section_name": "members",
-            "operationIdx": 3
+            "operationIdx": 2
           },
           {
             "comments": "Marriage edgelist creation",
             "clause": "do section marriages",
-            "_row_num": 11,
-            "__rowNum__": 10,
+            "_row_num": 9,
+            "__rowNum__": 8,
             "_token_type": "do_section",
             "_do_section_name": "marriages",
-            "operationIdx": 4
+            "operationIdx": 3
           },
           {
             "comments": "Family edgelist creation",
             "clause": "do section families",
-            "_row_num": 13,
-            "__rowNum__": 12,
+            "_row_num": 11,
+            "__rowNum__": 10,
             "_token_type": "do_section",
             "_do_section_name": "families",
-            "operationIdx": 5
-          },
-          {
-            "comments": "asset wealth",
-            "clause": "do section asset_wealth",
-            "_row_num": 15,
-            "__rowNum__": 14,
-            "_token_type": "do_section",
-            "_do_section_name": "asset_wealth",
-            "operationIdx": 6
-          },
-          {
-            "comments": "income of head and spouse",
-            "clause": "do section income",
-            "_row_num": 16,
-            "__rowNum__": 15,
-            "_token_type": "do_section",
-            "_do_section_name": "income",
-            "operationIdx": 7
+            "operationIdx": 4
           },
           {
             "comments": "food security",
             "clause": "do section food_security",
-            "_row_num": 17,
-            "__rowNum__": 16,
+            "_row_num": 13,
+            "__rowNum__": 12,
             "_token_type": "do_section",
             "_do_section_name": "food_security",
-            "operationIdx": 8
-          },
-          {
-            "comments": "crops and fishing",
-            "clause": "do section crops_fishing",
-            "_row_num": 18,
-            "__rowNum__": 17,
-            "_token_type": "do_section",
-            "_do_section_name": "crops_fishing",
-            "operationIdx": 9
+            "operationIdx": 5
           },
           {
             "comments": "Contact information",
             "clause": "do section contact_information",
-            "_row_num": 20,
-            "__rowNum__": 19,
+            "_row_num": 15,
+            "__rowNum__": 14,
             "_token_type": "do_section",
             "_do_section_name": "contact_information",
-            "operationIdx": 10
+            "operationIdx": 6
+          },
+          {
+            "comments": "assign head and spouse",
+            "clause": "do section assign_head",
+            "_row_num": 17,
+            "__rowNum__": 16,
+            "_token_type": "do_section",
+            "_do_section_name": "assign_head",
+            "operationIdx": 7
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 21,
-            "operationIdx": 11
+            "_row_num": 18,
+            "operationIdx": 8
           },
           {
-            "_row_num": 21,
+            "_row_num": 18,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 12
+            "operationIdx": 9
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 21,
-            "operationIdx": 13
+            "_row_num": 18,
+            "operationIdx": 10
           }
         ],
         "branch_label_map": {
-          "_contents": 12,
-          "_screen21": 12
+          "_contents": 9,
+          "_screen18": 9
         }
       },
       "id": {
@@ -2397,140 +2025,6 @@
           "_screen2": 0,
           "_contents": 2,
           "_screen8": 2
-        }
-      },
-      "customary_membership": {
-        "section_name": "customary_membership",
-        "nested_sections": {},
-        "reachable_sections": {},
-        "prompts": [
-          {
-            "type": "note",
-            "display": {
-              "prompt": {
-                "text": "Customary Membership Information:"
-              }
-            },
-            "_row_num": 4,
-            "__rowNum__": 3,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "customary_membership/_screen3",
-            "promptIdx": 0
-          },
-          {
-            "type": "text",
-            "name": "tokatoka",
-            "display": {
-              "prompt": {
-                "text": "Tokatoka:"
-              }
-            },
-            "_row_num": 5,
-            "__rowNum__": 4,
-            "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "customary_membership/_screen3",
-            "promptIdx": 1
-          },
-          {
-            "type": "text",
-            "name": "yavusa",
-            "display": {
-              "prompt": {
-                "text": "Yavusa:"
-              }
-            },
-            "_row_num": 6,
-            "__rowNum__": 5,
-            "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "customary_membership/_screen3",
-            "promptIdx": 2
-          },
-          {
-            "type": "text",
-            "name": "mataqali",
-            "display": {
-              "prompt": {
-                "text": "Mataqali:"
-              }
-            },
-            "_row_num": 7,
-            "__rowNum__": 6,
-            "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "customary_membership/_screen3",
-            "promptIdx": 3
-          },
-          {
-            "type": "text",
-            "name": "membership_notes",
-            "display": {
-              "prompt": {
-                "text": "Extra Notes:"
-              }
-            },
-            "_row_num": 8,
-            "__rowNum__": 7,
-            "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "customary_membership/_screen3",
-            "promptIdx": 4
-          },
-          {
-            "_token_type": "prompt",
-            "type": "contents",
-            "_type": "contents",
-            "_row_num": 10,
-            "_branch_label_enclosing_screen": "customary_membership/_screen10",
-            "promptIdx": 5
-          }
-        ],
-        "validation_tag_map": {
-          "finalize": []
-        },
-        "operations": [
-          {
-            "clause": "begin screen",
-            "_row_num": 3,
-            "__rowNum__": 2,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 9,
-              "__rowNum__": 8,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 0
-          },
-          {
-            "_token_type": "exit_section",
-            "clause": "exit section",
-            "_row_num": 10,
-            "operationIdx": 1
-          },
-          {
-            "_row_num": 10,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
-            "screen": {
-              "hideInBackHistory": true
-            },
-            "operationIdx": 2
-          },
-          {
-            "_token_type": "resume",
-            "clause": "resume",
-            "_row_num": 10,
-            "operationIdx": 3
-          }
-        ],
-        "branch_label_map": {
-          "_screen3": 0,
-          "_contents": 2,
-          "_screen10": 2
         }
       },
       "members": {
@@ -2808,365 +2302,63 @@
           "_screen7": 2
         }
       },
-      "asset_wealth": {
-        "section_name": "asset_wealth",
-        "nested_sections": {},
-        "reachable_sections": {},
-        "prompts": [
-          {
-            "type": "select_multiple",
-            "values_list": "asset_inventory",
-            "name": "asset_wealth",
-            "display": {
-              "prompt": {
-                "text": "Select which of the following items are present in the household:"
-              }
-            },
-            "_row_num": 4,
-            "__rowNum__": 3,
-            "_token_type": "prompt",
-            "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "asset_wealth/_screen2",
-            "promptIdx": 0
-          },
-          {
-            "_token_type": "prompt",
-            "type": "contents",
-            "_type": "contents",
-            "_row_num": 6,
-            "_branch_label_enclosing_screen": "asset_wealth/_screen6",
-            "promptIdx": 1
-          }
-        ],
-        "validation_tag_map": {
-          "finalize": []
-        },
-        "operations": [
-          {
-            "clause": "begin screen",
-            "_row_num": 2,
-            "__rowNum__": 1,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 5,
-              "__rowNum__": 4,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 0
-          },
-          {
-            "_token_type": "exit_section",
-            "clause": "exit section",
-            "_row_num": 6,
-            "operationIdx": 1
-          },
-          {
-            "_row_num": 6,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
-            "screen": {
-              "hideInBackHistory": true
-            },
-            "operationIdx": 2
-          },
-          {
-            "_token_type": "resume",
-            "clause": "resume",
-            "_row_num": 6,
-            "operationIdx": 3
-          }
-        ],
-        "branch_label_map": {
-          "_screen2": 0,
-          "_contents": 2,
-          "_screen6": 2
-        }
-      },
-      "income": {
-        "section_name": "income",
-        "nested_sections": {},
-        "reachable_sections": {},
-        "prompts": [
-          {
-            "type": "integer",
-            "name": "income_head_amount",
-            "display": {
-              "prompt": {
-                "text": "How much money did you earn in the past week?"
-              }
-            },
-            "_row_num": 3,
-            "__rowNum__": 2,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "income/_screen2",
-            "promptIdx": 0
-          },
-          {
-            "type": "text",
-            "name": "income_head_source",
-            "display": {
-              "prompt": {
-                "text": "How did you earn this money?"
-              }
-            },
-            "_row_num": 4,
-            "__rowNum__": 3,
-            "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "income/_screen2",
-            "promptIdx": 1
-          },
-          {
-            "type": "integer",
-            "name": "income_spouse_amount",
-            "display": {
-              "prompt": {
-                "text": "How much money did your spouse earn in the past week?"
-              }
-            },
-            "_row_num": 5,
-            "__rowNum__": 4,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "income/_screen2",
-            "promptIdx": 2
-          },
-          {
-            "type": "text",
-            "name": "income_spouse_source",
-            "display": {
-              "prompt": {
-                "text": "How did they earn this money?"
-              }
-            },
-            "_row_num": 6,
-            "__rowNum__": 5,
-            "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "income/_screen2",
-            "promptIdx": 3
-          },
-          {
-            "_token_type": "prompt",
-            "type": "contents",
-            "_type": "contents",
-            "_row_num": 8,
-            "_branch_label_enclosing_screen": "income/_screen8",
-            "promptIdx": 4
-          }
-        ],
-        "validation_tag_map": {
-          "finalize": []
-        },
-        "operations": [
-          {
-            "clause": "begin screen",
-            "_row_num": 2,
-            "__rowNum__": 1,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 7,
-              "__rowNum__": 6,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 0
-          },
-          {
-            "_token_type": "exit_section",
-            "clause": "exit section",
-            "_row_num": 8,
-            "operationIdx": 1
-          },
-          {
-            "_row_num": 8,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
-            "screen": {
-              "hideInBackHistory": true
-            },
-            "operationIdx": 2
-          },
-          {
-            "_token_type": "resume",
-            "clause": "resume",
-            "_row_num": 8,
-            "operationIdx": 3
-          }
-        ],
-        "branch_label_map": {
-          "_screen2": 0,
-          "_contents": 2,
-          "_screen8": 2
-        }
-      },
       "food_security": {
         "section_name": "food_security",
         "nested_sections": {},
         "reachable_sections": {},
         "prompts": [
           {
-            "type": "select_one_integer",
-            "values_list": "food_security_list",
-            "name": "food_security",
-            "display": {
-              "prompt": {
-                "text": "In the last year, which of the following statements most accurately describes your food situation?"
-              }
-            },
-            "_row_num": 3,
-            "__rowNum__": 2,
-            "_token_type": "prompt",
-            "_type": "select_one_integer",
-            "_branch_label_enclosing_screen": "food_security/_screen2",
-            "promptIdx": 0
-          },
-          {
-            "_token_type": "prompt",
-            "type": "contents",
-            "_type": "contents",
-            "_row_num": 5,
-            "_branch_label_enclosing_screen": "food_security/_screen5",
-            "promptIdx": 1
-          }
-        ],
-        "validation_tag_map": {
-          "finalize": []
-        },
-        "operations": [
-          {
-            "clause": "begin screen",
-            "_row_num": 2,
-            "__rowNum__": 1,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 4,
-              "__rowNum__": 3,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 0
-          },
-          {
-            "_token_type": "exit_section",
-            "clause": "exit section",
-            "_row_num": 5,
-            "operationIdx": 1
-          },
-          {
-            "_row_num": 5,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
-            "screen": {
-              "hideInBackHistory": true
-            },
-            "operationIdx": 2
-          },
-          {
-            "_token_type": "resume",
-            "clause": "resume",
-            "_row_num": 5,
-            "operationIdx": 3
-          }
-        ],
-        "branch_label_map": {
-          "_screen2": 0,
-          "_contents": 2,
-          "_screen5": 2
-        }
-      },
-      "crops_fishing": {
-        "section_name": "crops_fishing",
-        "nested_sections": {},
-        "reachable_sections": {},
-        "prompts": [
-          {
             "type": "integer",
-            "name": "crops_kava",
+            "name": "food_security_1",
             "display": {
               "prompt": {
-                "text": "Approximately how many kava plants do you have currently under cultivation?"
+                "text": "How many times in the last WEEK have you not had enough food to feed everyone?"
               }
             },
             "_row_num": 3,
             "__rowNum__": 2,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "crops_fishing/_screen2",
+            "_branch_label_enclosing_screen": "food_security/_screen2",
             "promptIdx": 0
           },
           {
             "type": "integer",
-            "name": "crops_taro",
+            "name": "food_security_2",
             "display": {
               "prompt": {
-                "text": "Approximately how many taro plants do you have currently under cultivation?"
+                "text": "How many times in the last MONTH?"
               }
             },
             "_row_num": 4,
             "__rowNum__": 3,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "crops_fishing/_screen2",
+            "_branch_label_enclosing_screen": "food_security/_screen2",
             "promptIdx": 1
           },
           {
             "type": "integer",
-            "name": "crops_cassava",
+            "name": "food_security_3",
             "display": {
               "prompt": {
-                "text": "Approximately how many cassava plants do you have currently under cultivation?"
+                "text": "How many times in the last YEAR?"
               }
             },
             "_row_num": 5,
             "__rowNum__": 4,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "crops_fishing/_screen2",
+            "_branch_label_enclosing_screen": "food_security/_screen2",
             "promptIdx": 2
-          },
-          {
-            "type": "integer",
-            "name": "fish_days",
-            "display": {
-              "prompt": {
-                "text": "In an average week, how many days do members of your household go fishing?"
-              }
-            },
-            "_row_num": 6,
-            "__rowNum__": 5,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "crops_fishing/_screen2",
-            "promptIdx": 3
-          },
-          {
-            "type": "integer",
-            "name": "fish_catch",
-            "display": {
-              "prompt": {
-                "text": "On average, how many fish are caught when out fishing?"
-              }
-            },
-            "_row_num": 7,
-            "__rowNum__": 6,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "crops_fishing/_screen2",
-            "promptIdx": 4
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 9,
-            "_branch_label_enclosing_screen": "crops_fishing/_screen9",
-            "promptIdx": 5
+            "_row_num": 7,
+            "_branch_label_enclosing_screen": "food_security/_screen7",
+            "promptIdx": 3
           }
         ],
         "validation_tag_map": {
@@ -3180,23 +2372,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 8,
-              "__rowNum__": 7,
+              "_row_num": 6,
+              "__rowNum__": 5,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 9,
+            "_row_num": 7,
             "operationIdx": 1
           },
           {
-            "_row_num": 9,
+            "_row_num": 7,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -3205,14 +2397,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 9,
+            "_row_num": 7,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen9": 2
+          "_screen7": 2
         }
       },
       "contact_information": {
@@ -3433,6 +2625,98 @@
           "_screen17": 2
         }
       },
+      "assign_head": {
+        "section_name": "assign_head",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "select_one",
+            "values_list": "linked_household_member",
+            "name": "household_head_uuid",
+            "display": {
+              "prompt": {
+                "text": "Select the head of household."
+              }
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "assign_head/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "select_one",
+            "values_list": "linked_household_member",
+            "name": "household_spouse_uuid",
+            "display": {
+              "prompt": {
+                "text": "Select their spouse."
+              }
+            },
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "assign_head/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 6,
+            "_branch_label_enclosing_screen": "assign_head/_screen6",
+            "promptIdx": 2
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 5,
+              "__rowNum__": 4,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 6,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 6,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 6,
+            "operationIdx": 3
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_contents": 2,
+          "_screen6": 2
+        }
+      },
       "initial": {
         "section_name": "initial",
         "nested_sections": {
@@ -3441,15 +2725,12 @@
         "reachable_sections": {
           "survey": true,
           "id": true,
-          "customary_membership": true,
           "members": true,
           "marriages": true,
           "families": true,
-          "asset_wealth": true,
-          "income": true,
           "food_security": true,
-          "crops_fishing": true,
-          "contact_information": true
+          "contact_information": true,
+          "assign_head": true
         },
         "prompts": [
           {
@@ -3657,295 +2938,212 @@
         "elementSet": "data",
         "elementPath": "household_village"
       },
-      "tokatoka": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 5,
-            "section_name": "customary_membership"
-          },
-          {
-            "_row_num": 5,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "tokatoka",
-        "elementName": "tokatoka",
-        "elementSet": "data",
-        "elementPath": "tokatoka"
-      },
-      "yavusa": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 6,
-            "section_name": "customary_membership"
-          },
-          {
-            "_row_num": 6,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "yavusa",
-        "elementName": "yavusa",
-        "elementSet": "data",
-        "elementPath": "yavusa"
-      },
-      "mataquali": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 7,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "mataquali",
-        "elementName": "mataquali",
-        "elementSet": "data",
-        "elementPath": "mataquali"
-      },
-      "membership_notes": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 8,
-            "section_name": "customary_membership"
-          },
-          {
-            "_row_num": 9,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "membership_notes",
-        "elementName": "membership_notes",
-        "elementSet": "data",
-        "elementPath": "membership_notes"
-      },
-      "asset_wealth": {
-        "type": "array",
-        "items": {
-          "type": "string",
-          "elementKey": "asset_wealth_items",
-          "elementName": "items",
-          "elementSet": "data",
-          "elementPath": "asset_wealth.items",
-          "notUnitOfRetention": true
-        },
-        "valuesList": "asset_inventory",
-        "_defn": [
-          {
-            "_row_num": 4,
-            "section_name": "asset_wealth"
-          },
-          {
-            "_row_num": 11,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "asset_wealth",
-        "elementName": "asset_wealth",
-        "elementSet": "data",
-        "elementPath": "asset_wealth",
-        "listChildElementKeys": [
-          "asset_wealth_items"
-        ]
-      },
-      "income_head_amount": {
+      "food_security_1": {
         "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 3,
-            "section_name": "income"
-          },
-          {
-            "_row_num": 13,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "income_head_amount",
-        "elementName": "income_head_amount",
-        "elementSet": "data",
-        "elementPath": "income_head_amount"
-      },
-      "income_head_source": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 4,
-            "section_name": "income"
-          },
-          {
-            "_row_num": 14,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "income_head_source",
-        "elementName": "income_head_source",
-        "elementSet": "data",
-        "elementPath": "income_head_source"
-      },
-      "income_spouse_amount": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 5,
-            "section_name": "income"
-          },
-          {
-            "_row_num": 15,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "income_spouse_amount",
-        "elementName": "income_spouse_amount",
-        "elementSet": "data",
-        "elementPath": "income_spouse_amount"
-      },
-      "income_spouse_source": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 6,
-            "section_name": "income"
-          },
-          {
-            "_row_num": 16,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "income_spouse_source",
-        "elementName": "income_spouse_source",
-        "elementSet": "data",
-        "elementPath": "income_spouse_source"
-      },
-      "food_security": {
-        "type": "integer",
-        "valuesList": "food_security_list",
         "_defn": [
           {
             "_row_num": 3,
             "section_name": "food_security"
           },
           {
-            "_row_num": 18,
+            "_row_num": 5,
             "section_name": "model"
           }
         ],
-        "elementKey": "food_security",
-        "elementName": "food_security",
+        "elementKey": "food_security_1",
+        "elementName": "food_security_1",
         "elementSet": "data",
-        "elementPath": "food_security"
+        "elementPath": "food_security_1"
       },
-      "crops_kava": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 3,
-            "section_name": "crops_fishing"
-          },
-          {
-            "_row_num": 20,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "crops_kava",
-        "elementName": "crops_kava",
-        "elementSet": "data",
-        "elementPath": "crops_kava"
-      },
-      "crops_taro": {
+      "food_security_2": {
         "type": "integer",
         "_defn": [
           {
             "_row_num": 4,
-            "section_name": "crops_fishing"
+            "section_name": "food_security"
+          },
+          {
+            "_row_num": 6,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "food_security_2",
+        "elementName": "food_security_2",
+        "elementSet": "data",
+        "elementPath": "food_security_2"
+      },
+      "food_security_3": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "food_security"
+          },
+          {
+            "_row_num": 7,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "food_security_3",
+        "elementName": "food_security_3",
+        "elementSet": "data",
+        "elementPath": "food_security_3"
+      },
+      "head_id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "head_id",
+        "elementName": "head_id",
+        "elementSet": "data",
+        "elementPath": "head_id"
+      },
+      "head_name": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 13,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "head_name",
+        "elementName": "head_name",
+        "elementSet": "data",
+        "elementPath": "head_name"
+      },
+      "spouse_id": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "spouse_id",
+        "elementName": "spouse_id",
+        "elementSet": "data",
+        "elementPath": "spouse_id"
+      },
+      "spouse_name": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "spouse_name",
+        "elementName": "spouse_name",
+        "elementSet": "data",
+        "elementPath": "spouse_name"
+      },
+      "contact_name_1": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "contact_information"
+          },
+          {
+            "_row_num": 17,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "contact_name_1",
+        "elementName": "contact_name_1",
+        "elementSet": "data",
+        "elementPath": "contact_name_1"
+      },
+      "contact_role_1": {
+        "type": "string",
+        "valuesList": "contact_roles",
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "contact_information"
+          },
+          {
+            "_row_num": 18,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "contact_role_1",
+        "elementName": "contact_role_1",
+        "elementSet": "data",
+        "elementPath": "contact_role_1"
+      },
+      "contact_details_1": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "contact_information"
+          },
+          {
+            "_row_num": 19,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "contact_details_1",
+        "elementName": "contact_details_1",
+        "elementSet": "data",
+        "elementPath": "contact_details_1"
+      },
+      "contact_name_2": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "contact_information"
           },
           {
             "_row_num": 21,
             "section_name": "model"
           }
         ],
-        "elementKey": "crops_taro",
-        "elementName": "crops_taro",
+        "elementKey": "contact_name_2",
+        "elementName": "contact_name_2",
         "elementSet": "data",
-        "elementPath": "crops_taro"
+        "elementPath": "contact_name_2"
       },
-      "crops_cassava": {
-        "type": "integer",
+      "contact_role_2": {
+        "type": "string",
+        "valuesList": "contact_roles",
         "_defn": [
           {
-            "_row_num": 5,
-            "section_name": "crops_fishing"
+            "_row_num": 13,
+            "section_name": "contact_information"
           },
           {
             "_row_num": 22,
             "section_name": "model"
           }
         ],
-        "elementKey": "crops_cassava",
-        "elementName": "crops_cassava",
+        "elementKey": "contact_role_2",
+        "elementName": "contact_role_2",
         "elementSet": "data",
-        "elementPath": "crops_cassava"
+        "elementPath": "contact_role_2"
       },
-      "fish_days": {
-        "type": "integer",
+      "contact_details_2": {
+        "type": "string",
         "_defn": [
           {
-            "_row_num": 6,
-            "section_name": "crops_fishing"
+            "_row_num": 14,
+            "section_name": "contact_information"
           },
           {
             "_row_num": 23,
             "section_name": "model"
           }
         ],
-        "elementKey": "fish_days",
-        "elementName": "fish_days",
+        "elementKey": "contact_details_2",
+        "elementName": "contact_details_2",
         "elementSet": "data",
-        "elementPath": "fish_days"
-      },
-      "fish_catch": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 7,
-            "section_name": "crops_fishing"
-          },
-          {
-            "_row_num": 24,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "fish_catch",
-        "elementName": "fish_catch",
-        "elementSet": "data",
-        "elementPath": "fish_catch"
-      },
-      "contact_name": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 26,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "contact_name",
-        "elementName": "contact_name",
-        "elementSet": "data",
-        "elementPath": "contact_name"
-      },
-      "contact_details": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 27,
-            "section_name": "model"
-          }
-        ],
-        "elementKey": "contact_details",
-        "elementName": "contact_details",
-        "elementSet": "data",
-        "elementPath": "contact_details"
+        "elementPath": "contact_details_2"
       },
       "household_image": {
         "_defn": [
@@ -4049,106 +3247,33 @@
         "elementSet": "data",
         "elementPath": "household_human_id"
       },
-      "mataqali": {
+      "household_head_uuid": {
         "_defn": [
           {
-            "_row_num": 7,
-            "section_name": "customary_membership"
+            "_row_num": 3,
+            "section_name": "assign_head"
           }
         ],
         "type": "string",
-        "elementKey": "mataqali",
-        "elementName": "mataqali",
+        "valuesList": "linked_household_member",
+        "elementKey": "household_head_uuid",
+        "elementName": "household_head_uuid",
         "elementSet": "data",
-        "elementPath": "mataqali"
+        "elementPath": "household_head_uuid"
       },
-      "contact_name_1": {
+      "household_spouse_uuid": {
         "_defn": [
           {
-            "_row_num": 6,
-            "section_name": "contact_information"
+            "_row_num": 4,
+            "section_name": "assign_head"
           }
         ],
         "type": "string",
-        "elementKey": "contact_name_1",
-        "elementName": "contact_name_1",
+        "valuesList": "linked_household_member",
+        "elementKey": "household_spouse_uuid",
+        "elementName": "household_spouse_uuid",
         "elementSet": "data",
-        "elementPath": "contact_name_1"
-      },
-      "contact_role_1": {
-        "_defn": [
-          {
-            "_row_num": 7,
-            "section_name": "contact_information"
-          }
-        ],
-        "type": "string",
-        "valuesList": "contact_roles",
-        "elementKey": "contact_role_1",
-        "elementName": "contact_role_1",
-        "elementSet": "data",
-        "elementPath": "contact_role_1"
-      },
-      "contact_details_1": {
-        "_defn": [
-          {
-            "_row_num": 8,
-            "section_name": "contact_information"
-          }
-        ],
-        "type": "string",
-        "elementKey": "contact_details_1",
-        "elementName": "contact_details_1",
-        "elementSet": "data",
-        "elementPath": "contact_details_1"
-      },
-      "contact_name_2": {
-        "_defn": [
-          {
-            "_row_num": 12,
-            "section_name": "contact_information"
-          }
-        ],
-        "type": "string",
-        "elementKey": "contact_name_2",
-        "elementName": "contact_name_2",
-        "elementSet": "data",
-        "elementPath": "contact_name_2"
-      },
-      "contact_role_2": {
-        "_defn": [
-          {
-            "_row_num": 13,
-            "section_name": "contact_information"
-          }
-        ],
-        "type": "string",
-        "valuesList": "contact_roles",
-        "elementKey": "contact_role_2",
-        "elementName": "contact_role_2",
-        "elementSet": "data",
-        "elementPath": "contact_role_2"
-      },
-      "contact_details_2": {
-        "_defn": [
-          {
-            "_row_num": 14,
-            "section_name": "contact_information"
-          }
-        ],
-        "type": "string",
-        "elementKey": "contact_details_2",
-        "elementName": "contact_details_2",
-        "elementSet": "data",
-        "elementPath": "contact_details_2"
-      },
-      "asset_wealth_items": {
-        "type": "string",
-        "elementKey": "asset_wealth_items",
-        "elementName": "items",
-        "elementSet": "data",
-        "elementPath": "asset_wealth.items",
-        "notUnitOfRetention": true
+        "elementPath": "household_spouse_uuid"
       },
       "household_image_uriFragment": {
         "type": "string",
@@ -4311,13 +3436,6 @@
     "properties": [
       {
         "_partition": "Column",
-        "_aspect": "asset_wealth",
-        "_key": "displayChoicesList",
-        "_type": "object",
-        "_value": "[{\"choice_list_name\":\"asset_inventory\",\"data_value\":\"thing1\",\"display\":{\"title\":{\"text\":\"Thing 1\"}},\"_row_num\":11},{\"choice_list_name\":\"asset_inventory\",\"data_value\":\"thing2\",\"display\":{\"title\":{\"text\":\"Thing 2\"}},\"_row_num\":12},{\"choice_list_name\":\"asset_inventory\",\"data_value\":\"thing3\",\"display\":{\"title\":{\"text\":\"Thing 3\"}},\"_row_num\":13},{\"choice_list_name\":\"asset_inventory\",\"data_value\":\"thing4\",\"display\":{\"title\":{\"text\":\"Thing 4\"}},\"_row_num\":14},{\"choice_list_name\":\"asset_inventory\",\"data_value\":\"thing5\",\"display\":{\"title\":{\"text\":\"Thing 5\"}},\"_row_num\":15},{\"choice_list_name\":\"asset_inventory\",\"data_value\":\"thing6\",\"display\":{\"title\":{\"text\":\"Thing 6\"}},\"_row_num\":16},{\"choice_list_name\":\"asset_inventory\",\"data_value\":\"thing7\",\"display\":{\"title\":{\"text\":\"Thing 7\"}},\"_row_num\":17},{\"choice_list_name\":\"asset_inventory\",\"data_value\":\"thing8\",\"display\":{\"title\":{\"text\":\"Thing 8\"}},\"_row_num\":18},{\"choice_list_name\":\"asset_inventory\",\"data_value\":\"thing9\",\"display\":{\"title\":{\"text\":\"Thing 9\"}},\"_row_num\":19},{\"choice_list_name\":\"asset_inventory\",\"data_value\":\"thing10\",\"display\":{\"title\":{\"text\":\"Thing 10\"}},\"_row_num\":20}]"
-      },
-      {
-        "_partition": "Column",
         "_aspect": "contact_role_1",
         "_key": "displayChoicesList",
         "_type": "object",
@@ -4329,13 +3447,6 @@
         "_key": "displayChoicesList",
         "_type": "object",
         "_value": "[{\"choice_list_name\":\"contact_roles\",\"data_value\":\"head\",\"display\":{\"title\":{\"text\":\"Head of household\"}},\"_row_num\":28},{\"choice_list_name\":\"contact_roles\",\"data_value\":\"spouse\",\"display\":{\"title\":{\"text\":\"Spouse of Head\"}},\"_row_num\":29},{\"choice_list_name\":\"contact_roles\",\"data_value\":\"other_member\",\"display\":{\"title\":{\"text\":\"Other household member\"}},\"_row_num\":30},{\"choice_list_name\":\"contact_roles\",\"data_value\":\"not_from_house\",\"display\":{\"title\":{\"text\":\"Someone from outside the home\"}},\"_row_num\":31}]"
-      },
-      {
-        "_partition": "Column",
-        "_aspect": "food_security",
-        "_key": "displayChoicesList",
-        "_type": "object",
-        "_value": "[{\"choice_list_name\":\"food_security_list\",\"data_value\":1,\"display\":{\"title\":{\"text\":\"Always had enough\"}},\"_row_num\":22},{\"choice_list_name\":\"food_security_list\",\"data_value\":2,\"display\":{\"title\":{\"text\":\"Didn't have enough a few times a year\"}},\"_row_num\":23},{\"choice_list_name\":\"food_security_list\",\"data_value\":3,\"display\":{\"title\":{\"text\":\"Didn't have enough a few times a month\"}},\"_row_num\":24},{\"choice_list_name\":\"food_security_list\",\"data_value\":4,\"display\":{\"title\":{\"text\":\"Didn't have enough a few times a week\"}},\"_row_num\":25},{\"choice_list_name\":\"food_security_list\",\"data_value\":5,\"display\":{\"title\":{\"text\":\"Never or almost never had enough\"}},\"_row_num\":26}]"
       },
       {
         "_partition": "Column",

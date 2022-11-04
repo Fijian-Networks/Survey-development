@@ -493,6 +493,28 @@
           }
         },
         "_row_num": 8
+      },
+      {
+        "choice_list_name": "forms",
+        "data_value": "network_member",
+        "display": {
+          "title": {
+            "text": "Network Member"
+          }
+        },
+        "comment": "New survey network method",
+        "_row_num": 10
+      },
+      {
+        "choice_list_name": "forms",
+        "data_value": "individual_survey",
+        "display": {
+          "title": {
+            "text": "Individual Survey"
+          }
+        },
+        "comment": "cooperation survey for head and spouse",
+        "_row_num": 12
       }
     ],
     "survey": [
@@ -662,6 +684,42 @@
       {
         "clause": "exit section",
         "_row_num": 38
+      },
+      {
+        "branch_label": "network_member",
+        "_row_num": 40
+      },
+      {
+        "url": "'?' + odkSurvey.getHashString('network_member')",
+        "type": "external_link",
+        "display": {
+          "prompt": {
+            "text": "Network Member"
+          }
+        },
+        "_row_num": 41
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 42
+      },
+      {
+        "branch_label": "individual_survey",
+        "_row_num": 44
+      },
+      {
+        "url": "'?' + odkSurvey.getHashString('individual_survey')",
+        "type": "external_link",
+        "display": {
+          "prompt": {
+            "text": "Individual survey"
+          }
+        },
+        "_row_num": 45
+      },
+      {
+        "clause": "exit section",
+        "_row_num": 46
       }
     ],
     "BACKUP": [
@@ -803,6 +861,28 @@
             }
           },
           "_row_num": 8
+        },
+        {
+          "choice_list_name": "forms",
+          "data_value": "network_member",
+          "display": {
+            "title": {
+              "text": "Network Member"
+            }
+          },
+          "comment": "New survey network method",
+          "_row_num": 10
+        },
+        {
+          "choice_list_name": "forms",
+          "data_value": "individual_survey",
+          "display": {
+            "title": {
+              "text": "Individual Survey"
+            }
+          },
+          "comment": "cooperation survey for head and spouse",
+          "_row_num": 12
         }
       ]
     },
@@ -1487,12 +1567,42 @@
             "promptIdx": 8
           },
           {
+            "url": "'?' + odkSurvey.getHashString('network_member')",
+            "type": "external_link",
+            "display": {
+              "prompt": {
+                "text": "Network Member"
+              }
+            },
+            "_row_num": 41,
+            "__rowNum__": 40,
+            "_token_type": "prompt",
+            "_type": "external_link",
+            "_branch_label_enclosing_screen": "survey/_screen41",
+            "promptIdx": 9
+          },
+          {
+            "url": "'?' + odkSurvey.getHashString('individual_survey')",
+            "type": "external_link",
+            "display": {
+              "prompt": {
+                "text": "Individual survey"
+              }
+            },
+            "_row_num": 45,
+            "__rowNum__": 44,
+            "_token_type": "prompt",
+            "_type": "external_link",
+            "_branch_label_enclosing_screen": "survey/_screen45",
+            "promptIdx": 10
+          },
+          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 39,
-            "_branch_label_enclosing_screen": "survey/_screen39",
-            "promptIdx": 9
+            "_row_num": 47,
+            "_branch_label_enclosing_screen": "survey/_screen47",
+            "promptIdx": 11
           }
         ],
         "validation_tag_map": {
@@ -1640,25 +1750,51 @@
             "operationIdx": 20
           },
           {
-            "_token_type": "exit_section",
-            "clause": "exit section",
-            "_row_num": 39,
+            "_row_num": 41,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 21
           },
           {
-            "_row_num": 39,
+            "clause": "exit section",
+            "_row_num": 42,
+            "__rowNum__": 41,
+            "_token_type": "exit_section",
+            "operationIdx": 22
+          },
+          {
+            "_row_num": 45,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 23
+          },
+          {
+            "clause": "exit section",
+            "_row_num": 46,
+            "__rowNum__": 45,
+            "_token_type": "exit_section",
+            "operationIdx": 24
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 47,
+            "operationIdx": 25
+          },
+          {
+            "_row_num": 47,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 22
+            "operationIdx": 26
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 39,
-            "operationIdx": 23
+            "_row_num": 47,
+            "operationIdx": 27
           }
         ],
         "branch_label_map": {
@@ -1682,8 +1818,12 @@
           "_screen33": 17,
           "families": 19,
           "_screen37": 19,
-          "_contents": 22,
-          "_screen39": 22
+          "network_member": 21,
+          "_screen41": 21,
+          "individual_survey": 23,
+          "_screen45": 23,
+          "_contents": 26,
+          "_screen47": 26
         }
       },
       "BACKUP": {

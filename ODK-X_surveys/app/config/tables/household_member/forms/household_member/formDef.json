@@ -348,7 +348,7 @@
       },
       {
         "setting_name": "form_version",
-        "value": 2,
+        "value": 2.1,
         "_row_num": 3
       },
       {
@@ -477,34 +477,39 @@
         "_row_num": 21
       },
       {
-        "name": "birthplace",
-        "type": "text",
+        "name": "children_number",
+        "type": "integer",
         "_row_num": 22
       },
       {
+        "name": "birthplace",
+        "type": "text",
+        "_row_num": 23
+      },
+      {
         "comment": "photo",
-        "_row_num": 24
+        "_row_num": 25
       },
       {
         "name": "person_photo",
         "type": "image",
-        "_row_num": 25
+        "_row_num": 26
       },
       {
         "comment": "assigned automatically",
         "name": "lives_in_household",
         "type": "select_one",
-        "_row_num": 27
+        "_row_num": 28
       },
       {
         "name": "is_alive",
         "type": "select_one",
-        "_row_num": 28
+        "_row_num": 29
       },
       {
         "name": "lives_fulltime",
         "type": "select_one",
-        "_row_num": 29
+        "_row_num": 30
       }
     ],
     "basic_demog": [
@@ -596,34 +601,6 @@
         "_row_num": 11
       },
       {
-        "clause": "begin screen",
-        "_row_num": 13
-      },
-      {
-        "type": "note",
-        "display": {
-          "prompt": {
-            "text": "Ethnicity Information"
-          }
-        },
-        "_row_num": 14
-      },
-      {
-        "type": "select_one_with_other",
-        "values_list": "ethnicity",
-        "name": "ethnicity",
-        "display": {
-          "prompt": {
-            "text": "Choose or enter information about ethnicity:"
-          }
-        },
-        "_row_num": 15
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 16
-      },
-      {
         "comment": "assigns default yes to is_alive",
         "type": "assign",
         "name": "is_alive",
@@ -681,7 +658,7 @@
     "demog_continued": [
       {
         "clause": "begin screen",
-        "_row_num": 2
+        "_row_num": 4
       },
       {
         "type": "select_one_dropdown",
@@ -692,7 +669,7 @@
             "text": "What is {{data.first_name}}'s relation to the head of the household?"
           }
         },
-        "_row_num": 4
+        "_row_num": 6
       },
       {
         "type": "text",
@@ -702,13 +679,13 @@
             "text": "Where was {{data.first_name}} born?"
           }
         },
-        "_row_num": 5
+        "_row_num": 7
       },
       {
         "clause": "if",
         "condition": "data('age') >= 16",
         "required": "data('age') >=16",
-        "_row_num": 6
+        "_row_num": 8
       },
       {
         "type": "select_one_dropdown",
@@ -719,16 +696,16 @@
             "text": "What is {{data.first_name}}'s marital status?"
           }
         },
-        "_row_num": 7
+        "_row_num": 9
       },
       {
         "clause": "end if",
-        "_row_num": 8
+        "_row_num": 10
       },
       {
         "clause": "if",
         "condition": "data('age') >= 5",
-        "_row_num": 10
+        "_row_num": 12
       },
       {
         "type": "integer",
@@ -738,17 +715,17 @@
             "text": "How many years of education has {{data.first_name}} had?"
           }
         },
-        "_row_num": 11
+        "_row_num": 13
       },
       {
         "clause": "end if",
-        "_row_num": 12
+        "_row_num": 14
       },
       {
         "clause": "if",
         "condition": "data('age') >= 16",
         "required": "data('age') >= 16",
-        "_row_num": 14
+        "_row_num": 16
       },
       {
         "type": "select_one",
@@ -759,33 +736,25 @@
             "text": "Does {{data.first_name}} have any children?"
           }
         },
-        "_row_num": 15
+        "_row_num": 19
       },
       {
-        "clause": "end if",
-        "_row_num": 16
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 18
-      },
-      {
-        "clause": "begin screen",
+        "type": "integer",
+        "name": "children_number",
+        "display": {
+          "prompt": {
+            "text": "If so, how many?"
+          }
+        },
         "_row_num": 20
       },
       {
-        "type": "image",
-        "name": "person_photo",
-        "display": {
-          "prompt": {
-            "text": "Please take a photo of the household member"
-          }
-        },
+        "clause": "end if",
         "_row_num": 21
       },
       {
         "clause": "end screen",
-        "_row_num": 22
+        "_row_num": 23
       }
     ]
   },
@@ -814,7 +783,7 @@
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 2,
+        "value": 2.1,
         "_row_num": 3
       },
       "table_id": {
@@ -1347,12 +1316,7 @@
       },
       "ethnicity": {
         "type": "string",
-        "valuesList": "ethnicity",
         "_defn": [
-          {
-            "_row_num": 15,
-            "section_name": "basic_demog"
-          },
           {
             "_row_num": 14,
             "section_name": "model"
@@ -1366,7 +1330,7 @@
         "valuesList": "relationships",
         "_defn": [
           {
-            "_row_num": 4,
+            "_row_num": 6,
             "section_name": "demog_continued"
           },
           {
@@ -1381,7 +1345,7 @@
         "valuesList": "marital_choices",
         "_defn": [
           {
-            "_row_num": 7,
+            "_row_num": 9,
             "section_name": "demog_continued"
           },
           {
@@ -1405,7 +1369,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 13,
             "section_name": "demog_continued"
           },
           {
@@ -1420,7 +1384,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 15,
+            "_row_num": 19,
             "section_name": "demog_continued"
           },
           {
@@ -1430,15 +1394,29 @@
         ],
         "elementKey": "has_children"
       },
-      "birthplace": {
-        "type": "string",
+      "children_number": {
+        "type": "integer",
         "_defn": [
           {
-            "_row_num": 5,
+            "_row_num": 20,
             "section_name": "demog_continued"
           },
           {
             "_row_num": 22,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "children_number"
+      },
+      "birthplace": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "demog_continued"
+          },
+          {
+            "_row_num": 23,
             "section_name": "model"
           }
         ],
@@ -1462,11 +1440,7 @@
         },
         "_defn": [
           {
-            "_row_num": 21,
-            "section_name": "demog_continued"
-          },
-          {
-            "_row_num": 25,
+            "_row_num": 26,
             "section_name": "model"
           }
         ],
@@ -1476,7 +1450,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 27,
+            "_row_num": 28,
             "section_name": "model"
           }
         ],
@@ -1496,7 +1470,7 @@
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 28,
+            "_row_num": 29,
             "section_name": "model"
           }
         ],
@@ -1515,7 +1489,7 @@
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 29,
+            "_row_num": 30,
             "section_name": "model"
           }
         ],
@@ -1871,36 +1845,6 @@
             "promptIdx": 7
           },
           {
-            "type": "note",
-            "display": {
-              "prompt": {
-                "text": "Ethnicity Information"
-              }
-            },
-            "_row_num": 14,
-            "__rowNum__": 13,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "basic_demog/_screen13",
-            "promptIdx": 8
-          },
-          {
-            "type": "select_one_with_other",
-            "values_list": "ethnicity",
-            "name": "ethnicity",
-            "display": {
-              "prompt": {
-                "text": "Choose or enter information about ethnicity:"
-              }
-            },
-            "_row_num": 15,
-            "__rowNum__": 14,
-            "_token_type": "prompt",
-            "_type": "select_one_with_other",
-            "_branch_label_enclosing_screen": "basic_demog/_screen13",
-            "promptIdx": 9
-          },
-          {
             "type": "select_one",
             "values_list": "yesno",
             "name": "lives_fulltime",
@@ -1914,7 +1858,7 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "basic_demog/_screen21",
-            "promptIdx": 10
+            "promptIdx": 8
           },
           {
             "type": "text",
@@ -1929,7 +1873,7 @@
             "_token_type": "prompt",
             "_type": "text",
             "_branch_label_enclosing_screen": "basic_demog/_screen21",
-            "promptIdx": 11
+            "promptIdx": 9
           },
           {
             "type": "select_one",
@@ -1945,7 +1889,7 @@
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "basic_demog/_screen21",
-            "promptIdx": 12
+            "promptIdx": 10
           },
           {
             "_token_type": "prompt",
@@ -1953,7 +1897,7 @@
             "_type": "contents",
             "_row_num": 26,
             "_branch_label_enclosing_screen": "basic_demog/_screen26",
-            "promptIdx": 13
+            "promptIdx": 11
           }
         ],
         "validation_tag_map": {
@@ -1975,20 +1919,6 @@
             "operationIdx": 0
           },
           {
-            "clause": "begin screen",
-            "_row_num": 13,
-            "__rowNum__": 12,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 16,
-              "__rowNum__": 15,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 1
-          },
-          {
             "comment": "assigns default yes to is_alive",
             "type": "assign",
             "name": "is_alive",
@@ -1996,7 +1926,7 @@
             "_row_num": 18,
             "__rowNum__": 17,
             "_token_type": "assign",
-            "operationIdx": 2
+            "operationIdx": 1
           },
           {
             "comment": "assigns default yes to lives_fulltime",
@@ -2006,7 +1936,7 @@
             "_row_num": 19,
             "__rowNum__": 18,
             "_token_type": "assign",
-            "operationIdx": 3
+            "operationIdx": 2
           },
           {
             "clause": "begin screen",
@@ -2019,37 +1949,36 @@
               "__rowNum__": 24,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 4
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 3
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
             "_row_num": 26,
-            "operationIdx": 5
+            "operationIdx": 4
           },
           {
             "_row_num": 26,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 6
+            "operationIdx": 5
           },
           {
             "_token_type": "resume",
             "clause": "resume",
             "_row_num": 26,
-            "operationIdx": 7
+            "operationIdx": 6
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
-          "_screen13": 1,
-          "_screen21": 4,
-          "_contents": 6,
-          "_screen26": 6
+          "_screen21": 3,
+          "_contents": 5,
+          "_screen26": 5
         }
       },
       "demog_continued": {
@@ -2066,11 +1995,11 @@
                 "text": "What is {{data.first_name}}'s relation to the head of the household?"
               }
             },
-            "_row_num": 4,
-            "__rowNum__": 3,
+            "_row_num": 6,
+            "__rowNum__": 5,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "demog_continued/_screen2",
+            "_branch_label_enclosing_screen": "demog_continued/_screen4",
             "promptIdx": 0
           },
           {
@@ -2081,11 +2010,11 @@
                 "text": "Where was {{data.first_name}} born?"
               }
             },
-            "_row_num": 5,
-            "__rowNum__": 4,
+            "_row_num": 7,
+            "__rowNum__": 6,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "demog_continued/_screen2",
+            "_branch_label_enclosing_screen": "demog_continued/_screen4",
             "promptIdx": 1
           },
           {
@@ -2097,11 +2026,11 @@
                 "text": "What is {{data.first_name}}'s marital status?"
               }
             },
-            "_row_num": 7,
-            "__rowNum__": 6,
+            "_row_num": 9,
+            "__rowNum__": 8,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "demog_continued/_screen2",
+            "_branch_label_enclosing_screen": "demog_continued/_screen4",
             "promptIdx": 2
           },
           {
@@ -2112,11 +2041,11 @@
                 "text": "How many years of education has {{data.first_name}} had?"
               }
             },
-            "_row_num": 11,
-            "__rowNum__": 10,
+            "_row_num": 13,
+            "__rowNum__": 12,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "demog_continued/_screen2",
+            "_branch_label_enclosing_screen": "demog_continued/_screen4",
             "promptIdx": 3
           },
           {
@@ -2128,34 +2057,34 @@
                 "text": "Does {{data.first_name}} have any children?"
               }
             },
-            "_row_num": 15,
-            "__rowNum__": 14,
+            "_row_num": 19,
+            "__rowNum__": 18,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "demog_continued/_screen2",
+            "_branch_label_enclosing_screen": "demog_continued/_screen4",
             "promptIdx": 4
           },
           {
-            "type": "image",
-            "name": "person_photo",
+            "type": "integer",
+            "name": "children_number",
             "display": {
               "prompt": {
-                "text": "Please take a photo of the household member"
+                "text": "If so, how many?"
               }
             },
-            "_row_num": 21,
-            "__rowNum__": 20,
+            "_row_num": 20,
+            "__rowNum__": 19,
             "_token_type": "prompt",
-            "_type": "image",
-            "_branch_label_enclosing_screen": "demog_continued/_screen20",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "demog_continued/_screen4",
             "promptIdx": 5
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 23,
-            "_branch_label_enclosing_screen": "demog_continued/_screen23",
+            "_row_num": 24,
+            "_branch_label_enclosing_screen": "demog_continued/_screen24",
             "promptIdx": 6
           }
         ],
@@ -2165,59 +2094,44 @@
         "operations": [
           {
             "clause": "begin screen",
-            "_row_num": 2,
-            "__rowNum__": 1,
+            "_row_num": 4,
+            "__rowNum__": 3,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 18,
-              "__rowNum__": 17,
+              "_row_num": 23,
+              "__rowNum__": 22,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nif (data('age') >= 16) {\nactivePromptIndicies.push(2);\n}\nif (data('age') >= 5) {\nactivePromptIndicies.push(3);\n}\nif (data('age') >= 16) {\nactivePromptIndicies.push(4);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nif (data('age') >= 16) {\nactivePromptIndicies.push(2);\n}\nif (data('age') >= 5) {\nactivePromptIndicies.push(3);\n}\nif (data('age') >= 16) {\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 20,
-            "__rowNum__": 19,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 22,
-              "__rowNum__": 21,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 1
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 23,
-            "operationIdx": 2
+            "_row_num": 24,
+            "operationIdx": 1
           },
           {
-            "_row_num": 23,
+            "_row_num": 24,
             "_token_type": "begin_screen",
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 3
+            "operationIdx": 2
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 23,
-            "operationIdx": 4
+            "_row_num": 24,
+            "operationIdx": 3
           }
         ],
         "branch_label_map": {
-          "_screen2": 0,
-          "_screen20": 1,
-          "_contents": 3,
-          "_screen23": 3
+          "_screen4": 0,
+          "_contents": 2,
+          "_screen24": 2
         }
       }
     },
@@ -2388,12 +2302,7 @@
       },
       "ethnicity": {
         "type": "string",
-        "valuesList": "ethnicity",
         "_defn": [
-          {
-            "_row_num": 15,
-            "section_name": "basic_demog"
-          },
           {
             "_row_num": 14,
             "section_name": "model"
@@ -2410,7 +2319,7 @@
         "valuesList": "relationships",
         "_defn": [
           {
-            "_row_num": 4,
+            "_row_num": 6,
             "section_name": "demog_continued"
           },
           {
@@ -2428,7 +2337,7 @@
         "valuesList": "marital_choices",
         "_defn": [
           {
-            "_row_num": 7,
+            "_row_num": 9,
             "section_name": "demog_continued"
           },
           {
@@ -2458,7 +2367,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 13,
             "section_name": "demog_continued"
           },
           {
@@ -2476,7 +2385,7 @@
         "valuesList": "yesno",
         "_defn": [
           {
-            "_row_num": 15,
+            "_row_num": 19,
             "section_name": "demog_continued"
           },
           {
@@ -2489,15 +2398,32 @@
         "elementSet": "data",
         "elementPath": "has_children"
       },
-      "birthplace": {
-        "type": "string",
+      "children_number": {
+        "type": "integer",
         "_defn": [
           {
-            "_row_num": 5,
+            "_row_num": 20,
             "section_name": "demog_continued"
           },
           {
             "_row_num": 22,
+            "section_name": "model"
+          }
+        ],
+        "elementKey": "children_number",
+        "elementName": "children_number",
+        "elementSet": "data",
+        "elementPath": "children_number"
+      },
+      "birthplace": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 7,
+            "section_name": "demog_continued"
+          },
+          {
+            "_row_num": 23,
             "section_name": "model"
           }
         ],
@@ -2530,11 +2456,7 @@
         },
         "_defn": [
           {
-            "_row_num": 21,
-            "section_name": "demog_continued"
-          },
-          {
-            "_row_num": 25,
+            "_row_num": 26,
             "section_name": "model"
           }
         ],
@@ -2552,7 +2474,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 27,
+            "_row_num": 28,
             "section_name": "model"
           }
         ],
@@ -2575,7 +2497,7 @@
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 28,
+            "_row_num": 29,
             "section_name": "model"
           }
         ],
@@ -2597,7 +2519,7 @@
             "section_name": "basic_demog"
           },
           {
-            "_row_num": 29,
+            "_row_num": 30,
             "section_name": "model"
           }
         ],
@@ -2737,13 +2659,6 @@
       }
     },
     "properties": [
-      {
-        "_partition": "Column",
-        "_aspect": "ethnicity",
-        "_key": "displayChoicesList",
-        "_type": "object",
-        "_value": "[{\"choice_list_name\":\"ethnicity\",\"data_value\":\"iTaukei\",\"display\":{\"title\":{\"text\":\"iTaukei\"}},\"_row_num\":8},{\"choice_list_name\":\"ethnicity\",\"data_value\":\"Solomoni\",\"display\":{\"title\":{\"text\":\"Solomoni\"}},\"_row_num\":9},{\"choice_list_name\":\"ethnicity\",\"data_value\":\"ni-vanuatu\",\"display\":{\"title\":{\"text\":\"Ni-Vanuatu\"}},\"_row_num\":10},{\"choice_list_name\":\"ethnicity\",\"data_value\":\"kai_india\",\"display\":{\"title\":{\"text\":\"Kai India\"}},\"_row_num\":11},{\"choice_list_name\":\"ethnicity\",\"data_value\":\"kai _oma\",\"display\":{\"title\":{\"text\":\"Kai Loma\"}},\"_row_num\":12}]"
-      },
       {
         "_partition": "Column",
         "_aspect": "has_children",
